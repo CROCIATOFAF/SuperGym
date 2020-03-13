@@ -1,0 +1,79 @@
+//devices
+$tablet-width: 1023px;
+$tablet-min-width: 768px;
+$mobile-width: 767px;
+$desktop-width: 1024px;
+//colors
+$buttons-color: #ff7931;
+$nav-text-color-mobile: #48494d;
+$background-color-light: #ffffff;
+$background-color-dark: #f7f7f7;
+$mobile-link-color: #f9f9fc;
+$main-text-color: #102654;
+$second-text-color: #ffffff;
+$text-color-hover: #ff7931;
+$footer-copyright-text-color: rgba(0, 0, 0, 0.2);
+$border-copyright-color: rgba(0, 0, 0, 0.2);
+//buttons
+$buttons-numbers-mobile: #48494d;
+$toggle-button-color: #ff7931;
+//links
+$link-button-background: rgba(0, 0, 0, 0.7);
+//retina
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+//screen-width
+$mobile-max-width: 767px;
+$tablet-max-width: 1023px;
+
+//fonts
+$font-stack-one: "Bebas Neue", Helvetica, sans-serif;
+$font-stack-two: "Roboto Condensed", Arial, sans-serif;
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin normal-text {
+  font: {
+    family: $font-stack-one;
+    size: 14px;
+    weight: 400;
+  }
+  line-height: 150%;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin large-text {
+  font: {
+    family: $font-stack-two;
+    size: 35px;
+    weight: 900;
+  }
+  line-height: 47px;
+  margin: 0;
+  padding: 0;
+}

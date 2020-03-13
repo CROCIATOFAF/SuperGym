@@ -1,0 +1,15 @@
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-nav__text {
+  font-family: $font-stack-one;
+  font-size: 26px;
+  line-height: 26px;
+  letter-spacing: 0.03em;
+  color: $second-text-color;
+
+  margin: 0;
+  padding: 0;
+}

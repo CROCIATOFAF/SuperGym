@@ -1,0 +1,17 @@
+.header {
+  background: url("../img/header-background.png") #1b2d37;
+  min-height: 658px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.header-wrapper {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-left: 103px;
+  padding-right: 103px;
+}

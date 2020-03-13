@@ -1,0 +1,68 @@
+.promo__header--first {
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  font-family: $font-stack-one;
+  color: $second-text-color;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: right;
+
+  padding: 0;
+  margin: 0;
+}
+
+.promo__header {
+  font-size: 109px;
+  line-height: 109px;
+  letter-spacing: 0.03em;
+  font-family: $font-stack-one;
+  color: $second-text-color;
+  text-transform: uppercase;
+  text-align: right;
+
+  padding: 0;
+  margin: 0;
+}
+
+.promo__wrapper {
+  padding-top: 124px;
+  padding-left: 187px;
+}
+
+.promo__wrapper-content {
+  position: relative;
+  width: 490px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    background-color: #1b2d37;
+    background: url("../img/SuperOmich.png");
+    background-size: 500px 556px;
+    background-repeat: no-repeat;
+    width: 705px;
+    height: 515px;
+    bottom: -17px;
+    left: 376px;
+  }
+}
+
+.promo__button {
+
+}
+
+.promo__text-wrapper {
+  position: absolute;
+}
+
+.promo__text {
+  font-family: $font-stack-two;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+  align-items: center;
+  text-align: right;
+  color: $second-text-color;
+}
