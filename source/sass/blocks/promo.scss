@@ -7,6 +7,7 @@
   text-transform: uppercase;
   font-weight: 400;
   text-align: right;
+  width: 300px;
 
   padding: 0;
   margin: 0;
@@ -20,40 +21,58 @@
   color: $second-text-color;
   text-transform: uppercase;
   text-align: right;
+  width: 300px;
 
   padding: 0;
   margin: 0;
 }
 
 .promo__wrapper {
+  position: relative;
   padding-top: 124px;
   padding-left: 187px;
 }
 
 .promo__wrapper-content {
   position: relative;
-  width: 490px;
+  width: 1141px;
+  margin: 0 auto;
 
   &:before {
     content: "";
     position: absolute;
     background-color: #1b2d37;
     background: url("../img/SuperOmich.png");
-    background-size: 500px 556px;
     background-repeat: no-repeat;
-    width: 705px;
-    height: 515px;
-    bottom: -17px;
-    left: 376px;
+    width: 500px;
+    height: 556px;
+    bottom: -160px;
+    left: 357px;
   }
 }
 
 .promo__button {
+  display: inline-block;
+  margin-top: 57px;
+  margin-left: 79px;
+  width: 234px;
+  height: 59px;
 
+  &:hover,
+  &:focus {
+    background: #023C83;
+    color: #efff6f;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .promo__text-wrapper {
   position: absolute;
+  bottom: 28px;
+  left: -83px;
 }
 
 .promo__text {
@@ -65,4 +84,43 @@
   align-items: center;
   text-align: right;
   color: $second-text-color;
+
+  padding: 0;
+  margin: 0;
+}
+
+.promo__social-list {
+  position: absolute;
+  right: 102px;
+  bottom: -3px;
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+.promo__social-list-item {
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.promo__social-link {
+  text-decoration: none;
+  color: $second-text-color;
+  text-transform: uppercase;
+  font-family: $font-stack-two;
+  font-size: 12px;
+  line-height: 14px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

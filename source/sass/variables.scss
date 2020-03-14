@@ -1,8 +1,7 @@
 //devices
-$tablet-width: 1023px;
-$tablet-min-width: 768px;
 $mobile-width: 767px;
-$desktop-width: 1024px;
+$tablet-width: 1199px;
+$desktop-width: 1200px;
 //colors
 $buttons-color: #ff7931;
 $nav-text-color-mobile: #48494d;
@@ -22,13 +21,10 @@ $link-button-background: rgba(0, 0, 0, 0.7);
 //retina
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
-//screen-width
-$mobile-max-width: 767px;
-$tablet-max-width: 1023px;
 
 //fonts
-$font-stack-one: "Bebas Neue", Helvetica, sans-serif;
-$font-stack-two: "Roboto Condensed", Arial, sans-serif;
+$font-stack-one: "Bebas Neue", "Helvetica", sans-serif;
+$font-stack-two: "Roboto Condensed", "Arial", sans-serif;
 
 .visually-hidden {
   position: absolute;

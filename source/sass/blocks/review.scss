@@ -1,0 +1,54 @@
+.review {
+  padding-left: 103px;
+  padding-right: 103px;
+  padding-top: 167px;
+  padding-bottom: 200px;
+}
+
+.review__wrapper {
+  width: 350px;
+  padding-left: 60px;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    background-color: #1b2d37;
+    background: url("../img/Gym.png");
+    background-repeat: no-repeat;
+    width: 660px;
+    height: 401px;
+    bottom: -37px;
+    left: 500px;
+  }
+}
+
+.review__header {
+  font-family: $font-stack-one;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  margin: 0;
+  padding: 0;
+}
+
+.review__sub-header {
+  font-family: $font-stack-two;
+  font-size: 18px;
+  line-height: 150%;
+
+  margin: 0;
+  padding: 0;
+}
+
+.review__text {
+  font-family: $font-stack-two;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+
+  margin: 0;
+  padding: 0;
+}
