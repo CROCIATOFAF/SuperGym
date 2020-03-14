@@ -2,7 +2,7 @@
   padding-left: 103px;
   padding-right: 103px;
   padding-top: 167px;
-  padding-bottom: 200px;
+  padding-bottom: 270px;
 }
 
 .review__wrapper {
@@ -18,37 +18,35 @@
     background-repeat: no-repeat;
     width: 660px;
     height: 401px;
-    bottom: -37px;
+    bottom: -30px;
     left: 500px;
   }
 }
 
 .review__header {
+  @include no-marg-padd;
   font-family: $font-stack-one;
   font-size: 49px;
   line-height: 49px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
-  margin: 0;
-  padding: 0;
+  margin-bottom: 3px;
 }
 
 .review__sub-header {
   font-family: $font-stack-two;
   font-size: 18px;
   line-height: 150%;
+  @include no-marg-padd;
 
-  margin: 0;
-  padding: 0;
+  margin-bottom: 38px;
+
 }
 
 .review__text {
-  font-family: $font-stack-two;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 150%;
+  @include small-text;
+  @include no-marg-padd;
 
-  margin: 0;
-  padding: 0;
+  margin-bottom: 9px;
 }

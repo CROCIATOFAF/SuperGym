@@ -1,0 +1,8 @@
+.subscription {
+  padding-top: 104px;
+}
+
+.subscription__header {
+  @include no-marg-padd;
+  @include section-header-desktop;
+}

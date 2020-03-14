@@ -9,6 +9,7 @@ $background-color-light: #ffffff;
 $background-color-dark: #f7f7f7;
 $mobile-link-color: #f9f9fc;
 $main-text-color: #102654;
+$small-text-color: #495A7D;
 $second-text-color: #ffffff;
 $text-color-hover: #ff7931;
 $footer-copyright-text-color: rgba(0, 0, 0, 0.2);
@@ -72,4 +73,27 @@ $font-stack-two: "Roboto Condensed", "Arial", sans-serif;
   line-height: 47px;
   margin: 0;
   padding: 0;
+}
+
+@mixin no-marg-padd {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin section-header-desktop {
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  font-family: $font-stack-one;
+  text-transform: uppercase;
+  text-align: center;
+  color: $main-text-color;
+}
+
+@mixin small-text {
+  font-family: $font-stack-two;
+  font-size: 16px;
+  line-height: 150%;
+  color: $small-text-color;
+  font-weight: 300;
 }

@@ -7,13 +7,13 @@
   color: $second-text-color;
   text-transform: uppercase;
   text-align: right;
-  width: 300px;
+  width: 293px;
 
-  padding: 0;
-  margin: 0;
+  @include no-marg-padd;
 }
 
 .promo__header--first {
+  @include no-marg-padd;
   font-size: 49px;
   line-height: 49px;
   letter-spacing: 0.03em;
@@ -22,15 +22,14 @@
   text-transform: uppercase;
   font-weight: 400;
   text-align: right;
-  width: 300px;
+  width: 293px;
+  margin-bottom: 13px;
 
-  padding: 0;
-  margin: 0;
 }
 
 .promo__wrapper {
   position: relative;
-  padding-top: 124px;
+  padding-top: 111px;
   padding-left: 187px;
 }
 
@@ -86,8 +85,7 @@
   text-align: right;
   color: $second-text-color;
 
-  padding: 0;
-  margin: 0;
+  @include no-marg-padd;
 }
 
 .promo__social-list {
@@ -95,9 +93,7 @@
   right: 102px;
   bottom: -3px;
   list-style: none;
-
-  padding: 0;
-  margin: 0;
+  @include no-marg-padd;
 }
 
 .promo__social-list-item {
