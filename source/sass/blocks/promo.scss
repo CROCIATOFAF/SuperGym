@@ -1,3 +1,7 @@
+.promo {
+  max-width: 1141px;
+  margin: 0 auto;
+}
 
 .promo__header {
   font-size: 109px;
@@ -30,7 +34,7 @@
 .promo__wrapper {
   position: relative;
   padding-top: 111px;
-  padding-left: 187px;
+  padding-left: 95px;
 }
 
 .promo__wrapper-content {
@@ -48,13 +52,18 @@
     height: 556px;
     bottom: -160px;
     left: 357px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/SuperOmich@2x.png");
+      background-size: 100% auto;
+    }
   }
 }
 
 .promo__button {
   display: inline-block;
   margin-top: 57px;
-  margin-left: 79px;
+  margin-left: 60px;
   width: 234px;
   height: 59px;
 
@@ -90,7 +99,7 @@
 
 .promo__social-list {
   position: absolute;
-  right: 102px;
+  right: -12px;
   bottom: -3px;
   list-style: none;
   @include no-marg-padd;
@@ -170,6 +179,11 @@
       height: 390px;
       bottom: -124px;
       left: 323px;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+         background-image: url("../img/SuperOmich-tablet@2x.png");
+        background-size: 100% auto;
+      }
     }
   }
 }

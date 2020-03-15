@@ -3,6 +3,7 @@ $mobile-width: 767px;
 $tablet-width: 1199px;
 $desktop-width: 1200px;
 //colors
+$footer-section-color: #030A1A;
 $buttons-color: #ff7931;
 $nav-text-color-mobile: #48494d;
 $background-color-light: #ffffff;
@@ -26,74 +27,3 @@ $retina-dppx: 1.5dppx;
 //fonts
 $font-stack-one: "Bebas Neue", "Helvetica", sans-serif;
 $font-stack-two: "Roboto Condensed", "Arial", sans-serif;
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-@mixin visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-@mixin normal-text {
-  font: {
-    family: $font-stack-one;
-    size: 14px;
-    weight: 400;
-  }
-  line-height: 150%;
-  margin: 0;
-  padding: 0;
-}
-
-@mixin large-text {
-  font: {
-    family: $font-stack-two;
-    size: 35px;
-    weight: 900;
-  }
-  line-height: 47px;
-  margin: 0;
-  padding: 0;
-}
-
-@mixin no-marg-padd {
-  padding: 0;
-  margin: 0;
-}
-
-@mixin section-header-desktop {
-  font-size: 49px;
-  line-height: 49px;
-  letter-spacing: 0.03em;
-  font-family: $font-stack-one;
-  text-transform: uppercase;
-  text-align: center;
-  color: $main-text-color;
-}
-
-@mixin small-text {
-  font-family: $font-stack-two;
-  font-size: 16px;
-  line-height: 150%;
-  color: $small-text-color;
-  font-weight: 300;
-}

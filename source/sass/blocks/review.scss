@@ -1,4 +1,7 @@
 .review {
+  max-width: 1160px;
+  margin: 0 auto;
+
   padding-left: 103px;
   padding-right: 103px;
   padding-top: 167px;
@@ -18,20 +21,21 @@
     background-repeat: no-repeat;
     width: 660px;
     height: 401px;
-    bottom: -30px;
-    left: 500px;
+    bottom: -31px;
+    left: 501px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+       background-image: url("../img/Gym@2x.png");
+      background-size: 100% auto;
+    }
   }
 }
 
 .review__header {
   @include no-marg-padd;
-  font-family: $font-stack-one;
-  font-size: 49px;
-  line-height: 49px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  @include section-header-desktop;
 
-  margin-bottom: 3px;
+  margin-bottom: 8px;
 }
 
 .review__sub-header {
@@ -41,7 +45,6 @@
   @include no-marg-padd;
 
   margin-bottom: 38px;
-
 }
 
 .review__text {
@@ -49,4 +52,56 @@
   @include no-marg-padd;
 
   margin-bottom: 9px;
+}
+
+@media (max-width: $tablet-width) {
+  .review__header {
+    @include section-header-tablet;
+    text-align: center;
+  }
+
+  .review__wrapper {
+    width: 100%;
+  }
+
+  .review__sub-header {
+    text-align: center;
+  }
+
+  .review__text {
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  .review__text--desktop {
+    @include visually-hidden;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .review {
+    padding-top: 69px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .review__wrapper {
+    padding-left: 0;
+  }
+
+  .review__sub-header {
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .review__header {
+    @include section-header-mobile;
+    text-align: left;
+  }
+
+  .review__text {
+    text-align: left;
+    width: 100%;
+  }
 }

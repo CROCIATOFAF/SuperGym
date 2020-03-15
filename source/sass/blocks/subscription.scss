@@ -5,4 +5,5 @@
 .subscription__header {
   @include no-marg-padd;
   @include section-header-desktop;
+  text-align: center;
 }

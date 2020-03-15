@@ -6,6 +6,11 @@
   background-position: center;
   width: 100%;
   overflow: hidden;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/header-background@2x.png");
+    background-size: 100% 100%;
+  }
 }
 
 .header-wrapper {
@@ -29,5 +34,11 @@
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 20px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .header{
+    min-height: 491px;
   }
 }
