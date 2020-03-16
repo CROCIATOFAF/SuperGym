@@ -28,7 +28,6 @@
   text-align: right;
   width: 293px;
   margin-bottom: 13px;
-
 }
 
 .promo__wrapper {
@@ -42,11 +41,11 @@
   width: 1141px;
   margin: 0 auto;
 
-  &:before {
+  &::before {
     content: "";
     position: absolute;
-    background-color: #1b2d37;
     background: url("../img/SuperOmich.png");
+    background-color: #1b2d37;
     background-repeat: no-repeat;
     width: 500px;
     height: 556px;
@@ -66,11 +65,12 @@
   margin-left: 60px;
   width: 234px;
   height: 59px;
+  outline: none;
 
   &:hover,
   &:focus {
-    background: #023C83;
-    color: #efff6f;
+    background: #023c83;
+    color: $button-hover-color;
   }
 
   &:active {
@@ -102,6 +102,7 @@
   right: -12px;
   bottom: -3px;
   list-style: none;
+
   @include no-marg-padd;
 }
 
@@ -120,6 +121,7 @@
   font-family: $font-stack-two;
   font-size: 12px;
   line-height: 14px;
+  outline: none;
 
   &:hover,
   &:focus {
@@ -168,12 +170,11 @@
   }
 
   .promo__wrapper-content {
-
-    &:before {
+    &::before {
       content: "";
       position: absolute;
-      background-color: #1b2d37;
       background: url("../img/SuperOmich-tablet.png");
+      background-color: #1b2d37;
       background-repeat: no-repeat;
       width: 324px;
       height: 390px;
@@ -181,7 +182,7 @@
       left: 323px;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-         background-image: url("../img/SuperOmich-tablet@2x.png");
+        background-image: url("../img/SuperOmich-tablet@2x.png");
         background-size: 100% auto;
       }
     }
@@ -217,8 +218,9 @@
   }
 
   .promo__wrapper-content {
+    width: 100%;
 
-    &:before {
+    &::before {
       display: none;
     }
   }

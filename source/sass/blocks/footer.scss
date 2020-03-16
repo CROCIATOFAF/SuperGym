@@ -15,17 +15,22 @@
 
 .footer__bottom-nav-list {
   list-style: none;
+
   @include no-marg-padd;
   display: flex;
 }
 
 .footer__bottom-social-list {
   list-style: none;
+  display: flex;
+  align-items: center;
+
   @include no-marg-padd;
 }
 
 .footer__bottom-link {
   text-decoration: none;
+
   @include footer-link-text;
 }
 
@@ -41,20 +46,12 @@
   }
 }
 
-.footer__bottom-social-list {
-  display: flex;
-}
-
 .footer__bottom-social-item {
   margin-right: 25px;
 
   &:last-child {
     margin-right: 0;
   }
-}
-
-.footer__bottom-social-list {
-  align-items: center;
 }
 
 .footer__vk-img {
@@ -69,7 +66,7 @@
 
 .footer__insta-img {
   width: 24px;
-  height: 24px
+  height: 24px;
 }
 
 @media (max-width: $tablet-width) {

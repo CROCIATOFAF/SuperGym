@@ -1,40 +1,21 @@
 .review {
-  max-width: 1160px;
+  max-width: 1366px;
   margin: 0 auto;
 
   padding-left: 103px;
   padding-right: 103px;
-  padding-top: 167px;
-  padding-bottom: 270px;
-}
+  padding-top: 120px;
+  padding-bottom: 153px;
 
-.review__wrapper {
-  width: 350px;
-  padding-left: 60px;
-  position: relative;
-
-  &:before {
-    content: "";
-    position: absolute;
-    background-color: #1b2d37;
-    background: url("../img/Gym.png");
-    background-repeat: no-repeat;
-    width: 660px;
-    height: 401px;
-    bottom: -31px;
-    left: 501px;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-       background-image: url("../img/Gym@2x.png");
-      background-size: 100% auto;
-    }
-  }
+  display: flex;
+  justify-content: space-between;
 }
 
 .review__header {
   @include no-marg-padd;
   @include section-header-desktop;
 
+  margin-top: 49px;
   margin-bottom: 8px;
 }
 
@@ -42,6 +23,7 @@
   font-family: $font-stack-two;
   font-size: 18px;
   line-height: 150%;
+
   @include no-marg-padd;
 
   margin-bottom: 38px;
@@ -54,14 +36,60 @@
   margin-bottom: 9px;
 }
 
+.review__video-wrapper {
+  position: absolute;
+  top: -117px;
+  right: 46px;
+}
+
+.review__photo-wrapper {
+  position: relative;
+}
+
+.review__wrapper {
+  width: 350px;
+  position: relative;
+  margin-left: 60px;
+}
+
+.review__video-wrapper button {
+  width: 100px;
+  height: 100px;
+  border: none;
+  background: url("../img/play-button.svg") no-repeat center;
+  cursor: pointer;
+  border-radius: 50%;
+  outline: none;
+  position: absolute;
+  top: 64px;
+  left: 134px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
 @media (max-width: $tablet-width) {
+  .review {
+    flex-direction: column;
+    padding-top: 99px;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
   .review__header {
     @include section-header-tablet;
     text-align: center;
+    margin-top: 0;
   }
 
   .review__wrapper {
     width: 100%;
+    margin-left: 0;
   }
 
   .review__sub-header {
@@ -70,12 +98,16 @@
 
   .review__text {
     text-align: center;
-    width: 500px;
+    width: 501px;
     margin: 0 auto;
   }
 
   .review__text--desktop {
     @include visually-hidden;
+  }
+
+  .review__photo-wrapper {
+    padding-top: 39px;
   }
 }
 
@@ -92,7 +124,7 @@
 
   .review__sub-header {
     text-align: left;
-    margin-bottom: 0;
+    margin-bottom: 22px;
   }
 
   .review__header {
@@ -103,5 +135,6 @@
   .review__text {
     text-align: left;
     width: 100%;
+    padding-right: 29px;
   }
 }

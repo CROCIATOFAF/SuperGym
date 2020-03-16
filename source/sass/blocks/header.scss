@@ -20,6 +20,10 @@
 }
 
 @media (max-width: $tablet-width) {
+  .header {
+    min-height: 554px;
+  }
+
   .header-wrapper {
     max-width: 1199px;
     padding-top: 40px;
@@ -31,14 +35,21 @@
 @media (max-width: $tablet-width) {
   .header-wrapper {
     max-width: $tablet-width;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 20px;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 40px;
   }
 }
 
 @media (max-width: $mobile-width) {
-  .header{
+  .header {
     min-height: 491px;
+  }
+
+  .header-wrapper {
+    max-width: $mobile-width;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
   }
 }

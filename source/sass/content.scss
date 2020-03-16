@@ -1,7 +1,18 @@
 html {
   color: $main-text-color;
+  box-sizing: border-box;
 }
 
 body {
   @include no-marg-padd;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
 }
