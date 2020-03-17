@@ -1,0 +1,262 @@
+.competition {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 120px 103px 119px;
+}
+
+.competition__img-tablet,
+.competition__img-mobile {
+  display: none;
+}
+
+.competition__img-desktop {
+  display: block;
+}
+
+.competition__container {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.competition__title {
+  font-family: $font-stack-one;
+  font-size: 90px;
+  line-height: 90px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: $second-text-color;
+  width: 201px;
+  margin: 0 10px 0 0;
+}
+
+.competition__block-data p,
+.competition__description {
+  font-family: $font-stack-two;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: $second-text-color;
+}
+
+.competition__description {
+  margin: 10px 0 46px 0;
+}
+
+.competition__count-data,
+.competition__time {
+  font-family: $font-stack-two;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  color: $second-text-color;
+}
+
+.competition__time {
+  border-top: 1px solid $second-text-color;
+  padding-top: 3px;
+  margin-bottom: 7px;
+}
+
+.competition__text-data {
+  font-family: $font-stack-two;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: $second-text-color;
+  display: block;
+  width: 37px;
+  margin-left: 7px;
+}
+
+.competition__container-data {
+  width: 64px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid $second-text-color;
+  padding-top: 4px;
+  margin-bottom: 20px;
+}
+
+.competition__link {
+  display: block;
+  font-family: $font-stack-two;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 4px solid $second-text-color;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto 0;
+  padding: 24px 0;
+  cursor: pointer;
+  color: $second-text-color;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    color: $button-hover-color;
+    border: 4px solid $button-hover-color;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.competition__info {
+  background: $competition-background-color;
+  display: flex;
+  flex-direction: column;
+  padding: 83px 78px 85px;
+  width: 43%;
+  max-height: 500px;
+}
+
+.competition__titel-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.competition__block-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.competition__title-data,
+.competition__title-time {
+  margin: 0 0 3px 0;
+}
+
+.competition__picture {
+  width: 57%;
+  max-height: 500px;
+}
+
+.competition__picture img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: $tablet-width) {
+  .competition {
+    max-width: 1199px;
+    margin: 0 auto;
+    padding: 100px 45px 98px;
+  }
+
+  .competition__img-desktop,
+  .competition__img-mobile {
+    display: none;
+  }
+
+  .competition__img-tablet {
+    display: block;
+  }
+
+  .competition__title {
+    font-size: 52px;
+    line-height: 52px;
+    width: 117px;
+    margin: 0;
+  }
+
+  .competition__block-data p,
+  .competition__description {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .competition__count-data,
+  .competition__time {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .competition__time {
+    margin-bottom: 0;
+  }
+
+  .competition__text-data {
+    font-size: 10px;
+    line-height: 12px;
+    width: 26px;
+    margin-left: 3px;
+  }
+
+  .competition__link {
+    font-size: 10px;
+    line-height: 12px;
+    padding: 13px 0 14px;
+    border: 2px solid $second-text-color;
+  }
+
+  .competition__info {
+    padding: 48px 45px 50px;
+    width: calc(100% - 386px);
+    max-height: 292px;
+  }
+
+  .competition__picture {
+    max-height: 292px;
+  }
+
+  .competition__container-data {
+    width: 42px;
+    padding-top: 2px;
+    margin-bottom: 7px;
+  }
+
+  .competition__title-data,
+  .competition__title-time {
+    margin: 0;
+  }
+
+  .competition__description {
+    margin: 2px 0 28px 0;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .competition {
+    max-width: 767px;
+    margin: 0 auto;
+    padding: 70px 15px 71px;
+  }
+
+  .competition__img-desktop,
+  .competition__img-tablet {
+    display: none;
+  }
+
+  .competition__img-mobile {
+    display: block;
+  }
+
+  .competition__container {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .competition__info {
+    padding: 49px 45px;
+    width: 100%;
+  }
+
+  .competition__picture {
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+  }
+
+  .competition__picture img {
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}

@@ -1,7 +1,7 @@
 'use strict';
 var btnScrollDown =
 document.querySelector('.promo__button');
-var subscriptionSection = document.querySelector('.subscription');
+var subscriptionSection = document.querySelector('.subscriptions');
 
 btnScrollDown.addEventListener('click', function (evt) {
   evt.preventDefault();
