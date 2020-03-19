@@ -42,7 +42,8 @@
   border-width: 7px;
   border-image: linear-gradient(to bottom right, $second-text-color, $second-text-color);
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-image: linear-gradient(to bottom right, $gradient-color-top, $gradient-color-bottom);
     border-image-slice: 1;
 
@@ -51,6 +52,7 @@
       background: linear-gradient(to right, $gradient-color-top, $gradient-color-bottom);
       color: $second-text-color;
     }
+    animation: slide-in-bck-center 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
 }
 
@@ -182,7 +184,7 @@
   color: $main-text-color;
 }
 
-.hide {
+.hidden {
   display: none;
 }
 
@@ -263,7 +265,7 @@
   .subscriptions__item-month {
     font-size: 16px;
     line-height: 16px;
-    padding-bottom: 15px;
+    padding-bottom: 13px;
   }
 
   .subscriptions__controls-list {
