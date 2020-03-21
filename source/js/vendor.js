@@ -56,6 +56,7 @@ $(reviewsList).slick({
   speed: 300,
   slidesToShow: 1,
   slidesToScroll: 1,
+  adaptiveHeight: true,
   arrows: true,
   prevArrow: reviewsContainer.querySelector('.reviews__arrow-left'),
   nextArrow: reviewsContainer.querySelector('.reviews__arrow-right')
