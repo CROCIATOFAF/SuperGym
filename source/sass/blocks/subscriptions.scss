@@ -1,8 +1,8 @@
 .subscriptions {
-  position: relative;
   background-color: $second-background-color;
+  position: relative;
 
-  &::before {
+  &::after {
     content: "";
     display: block;
     width: 287px;
@@ -18,16 +18,67 @@
 .subscriptions__wrap {
   max-width: 1366px;
   margin: 0 auto;
-  padding: 0 103px;
-  padding-top: 102px;
+  padding-top: 118px;
   padding-bottom: 80px;
 }
 
 .subscriptions__header {
-  @include no-marg-padd;
   @include section-header-desktop;
+  color: $main-text-color;
+  margin: 0 auto 41px;
   text-align: center;
-  margin-bottom: 40px;
+}
+
+.subscriptions__controls-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.subscriptions__controls-list {
+  @include no-marg-padd;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  border-bottom: 2px solid #e4e4e4;
+  padding-bottom: 13px;
+}
+
+.subscriptions__controls-list li {
+  margin-right: 46px;
+}
+
+.subscriptions__controls-list li:last-child {
+  margin-right: 0;
+}
+
+.subscriptions__item-month {
+  color: $main-text-color;
+  font-family: $font-stack-two;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  cursor: pointer;
+  padding-bottom: 13px;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.subscriptions__item-month--active {
+  border-bottom: 2px solid $gradient-color-top;
+}
+
+.subscriptions__tabs-list {
+  @include no-marg-padd;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 39px;
+  position: relative;
+  z-index: 10;
 }
 
 .subscriptions__tabs-list li {
@@ -42,8 +93,7 @@
   border-width: 7px;
   border-image: linear-gradient(to bottom right, $second-text-color, $second-text-color);
 
-  &:hover,
-  &:focus {
+  &:hover {
     border-image: linear-gradient(to bottom right, $gradient-color-top, $gradient-color-bottom);
     border-image-slice: 1;
 
@@ -52,7 +102,6 @@
       background: linear-gradient(to right, $gradient-color-top, $gradient-color-bottom);
       color: $second-text-color;
     }
-    animation: slide-in-bck-center 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
 }
 
@@ -76,63 +125,6 @@
   line-height: 24px;
   margin: 10px 0 0;
   text-align: center;
-}
-
-.subscriptions__item-month {
-  color: $main-text-color;
-  font-family: $font-stack-two;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 20px;
-  cursor: pointer;
-  padding-bottom: 14px;
-
-  &:hover {
-    opacity: 0.7;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-}
-
-.subscriptions__item-month--active {
-  border-bottom: 2px solid $gradient-color-top;
-}
-
-.subscriptions__controls-wrap {
-  display: flex;
-  justify-content: center;
-}
-
-.subscriptions__controls-list {
-  @include no-marg-padd;
-  list-style: none;
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  border-bottom: 2px solid $border-subscriptions-color;
-  padding-bottom: 15px;
-}
-
-.subscriptions__controls-list li {
-  margin-right: 46px;
-}
-
-.subscriptions__controls-list li:last-child {
-  margin-right: 0;
-}
-
-.subscriptions__tabs-list {
-  list-style: none;
-
-  @include no-marg-padd;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  margin-top: 39px;
-  position: relative;
-  z-index: 10;
 }
 
 .subscriptions__bg-price {
@@ -184,7 +176,7 @@
   color: $main-text-color;
 }
 
-.hidden {
+.hide {
   display: none;
 }
 
@@ -197,14 +189,16 @@
     &::after {
       width: 347px;
       height: 444px;
-      background: url("../img/pink-plates-tablet.png") no-repeat center;
+      background: url("../img/flapjack-tablet.png") no-repeat center;
       bottom: -125px;
       right: 0;
     }
   }
 
   .subscriptions__wrap {
-    padding: 70px 163px 60px;
+    max-width: 1199px;
+    margin: 0 auto;
+    padding: 98px 163px 60px;
   }
 
   .subscriptions__header {
@@ -228,7 +222,6 @@
   .subscriptions__item-month {
     font-size: 18px;
     line-height: 18px;
-    padding-bottom: 11px;
   }
 
   .subscriptions__tabs-list {
@@ -251,10 +244,13 @@
   }
 
   .subscriptions__wrap {
+    max-width: 767px;
+    margin: 0 auto;
     padding: 69px 15px 34px;
   }
 
-  .subscriptions__title {
+  .subscriptions__header {
+    @include section-header-mobile;
     margin: 0 auto 23px;
   }
 
@@ -265,7 +261,7 @@
   .subscriptions__item-month {
     font-size: 16px;
     line-height: 16px;
-    padding-bottom: 13px;
+    padding-bottom: 15px;
   }
 
   .subscriptions__controls-list {

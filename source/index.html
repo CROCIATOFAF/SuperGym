@@ -6,6 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Super Gym</title>
+
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
   <link rel="stylesheet" href="css/style.min.css" type="text/css">
 </head>
 
@@ -54,171 +60,192 @@
   </header>
 
   <main>
-    <section class="review">
-      <h2 class="visually-hidden">Тренажерный зал</h2>
-      <div class="review__wrapper">
-        <h3 class="review__header">Тренажерный зал</h3>
-        <h4 class="review__sub-header">Просторный зал площадью 900 кв/м</h4>
-        <p class="review__text">
-          Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.
-        </p>
-        <p class="review__text review__text--desktop">
-          В зале расположены отдельная зона для Crossfit и
-          кардио-зона с 40 тренажерами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.
-        </p>
+    <section class="review" id="review">
+      <div class="review__description-container">
+        <h2 class="review__header">Тренажерный зал</h2>
+        <span>Просторный зал площадью 900 кв/м</span>
+        <p>Superreview – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
+        <p class="review__text-desktop">В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
       </div>
-      <div class="review__photo-wrapper">
-        <img class="review__image" src="img/Gym.png" width="660" height="401" alt="Фото тренажерного зала изнутри">
-        <div class="review__video-wrapper">
-          <img class="gym__video-desktop" src="img/gym-video.png" width="364" height="228" alt="Видео из спортзала">
-          <button type="button" aria-label="Пуск видео"></button>
+      <div class="review__photo-container">
+        <img class="review__photo-desktop" src="img/Gym.png" width="660" height="401" srcset="img/Gym.png, img/Gym.png@2x.png 2x" alt="Тренажерный зал, панорама">
+        <img class="review__photo-tablet" src="img/Gym-tablet.png" width="678" height="345" srcset="img/Gym-tablet.png, img/Gym-tablet@2x.png 2x" alt="Тренажерный зал, панорама">
+        <img class="review__photo-mobile" src="img/Gym-mobile.png" width="320" height="313" srcset="img/Gym-mobile.png, img/Gym-mobile@2x.png 2x" alt="Тренажерный зал, панорама">
+        <div class="review__video-container">
+          <img class="review__video-desktop" src="img/gym-video.png" width="364" height="228" srcset="img/gym-video.png, img/gym-video@2x.png 2x" alt="Видео обзор зала">
+          <img class="review__video-tablet" src="img/gym-video-tablet.png" width="266" height="167" srcset="img/gym-video-tablet.png, img/gym-video-tablet@2x.png 2x" alt="Видео обзор зала">
+          <img class="review__video-mobile" src="img/gym-video-mobile.png" width="320" height="167" srcset="img/gym-video-mobile.png, img/gym-video-mobile@2x.png 2x" alt="Видео обзор зала">
+          <button type="button" aria-label="Запустить видео"></button>
         </div>
       </div>
     </section>
+
     <section class="subscriptions">
-      <div class="subscriptions__wrap">
-        <h3 class="subscriptions__header">Абонементы</h3>
-        <div class="subscriptions__controls-wrap">
-          <ul class="subscriptions__controls-list">
-            <li><span class="subscriptions__item-month subscriptions__item-month--active">1 месяц</span></li>
-            <li><span class="subscriptions__item-month">6 месяцев</span></li>
-            <li><span class="subscriptions__item-month">12 месяцев</span></li>
+      <h3 class="subscriptions__header">Абонементы</h3>
+
+      <div class="subscriptions__tabs">
+        <!--ex-wraps-->
+
+        <!-- <div class="subscriptions__controls-wrap"> -->
+        <ul class="subscriptions__controls-list">
+          <li>
+            <a class="subscriptions__item-month" href="#fragment-1">1 месяц</a>
+          </li>
+          <li>
+            <a class="subscriptions__item-month" href="#fragment-2">6 месяцев</a>
+          </li>
+          <li>
+            <a class="subscriptions__item-month" href="#fragment-3">12 месяцев</a>
+          </li>
+        </ul>
+        <!-- </div> -->
+
+        <!-- <div class="subscriptions__content"> -->
+        <!-- tabs-list -->
+        <div class="subscriptions__fragment" id="fragment-1">
+          <ul>
+            <li>
+              <h3>С тренером</h3>
+              <p>12 занятий</p>
+              <span class="subscriptions__bg-price">5000</span>
+              <div class="subscriptions__price-container">
+                <span class="subscriptions__price">5000</span>
+                <svg width="30" height="42" viewBox="0 0 30 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 6H10V17H18.5C21.5376 17 24 14.5376 24 11.5C24 8.46243 21.5376 6 18.5 6ZM4 0V23H18.5C24.8513 23 30 17.8513 30 11.5C30 5.14873 24.8513 0 18.5 0H4Z" fill="#102654" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17H6V23H0V17Z" fill="#102654" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.65854 28.3214V18H9.65854V28.3214H21V34.3214H9.65854V42H3.65854V34.3214H0V28.3214H3.65854Z" fill="#102654" />
+                </svg>
+              </div>
+              <a class="subscriptions__buy-link" href="#">купить абонемент</a>
+            </li>
+            <li>
+              <h3>Дневной</h3>
+              <p>с 8:00 до 17:00</p>
+              <span class="subscriptions__bg-price">1700</span>
+              <div class="subscriptions__price-container">
+                <span class="subscriptions__price">1700</span>
+                <svg width="30" height="42" viewBox="0 0 30 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 6H10V17H18.5C21.5376 17 24 14.5376 24 11.5C24 8.46243 21.5376 6 18.5 6ZM4 0V23H18.5C24.8513 23 30 17.8513 30 11.5C30 5.14873 24.8513 0 18.5 0H4Z" fill="#102654" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17H6V23H0V17Z" fill="#102654" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.65854 28.3214V18H9.65854V28.3214H21V34.3214H9.65854V42H3.65854V34.3214H0V28.3214H3.65854Z" fill="#102654" />
+                </svg>
+              </div>
+              <a class="subscriptions__buy-link" href="#">купить абонемент</a>
+            </li>
+            <li>
+              <h3>Полный день</h3>
+              <p>с 8:00 до 22:00</p>
+              <span class="subscriptions__bg-price">2700</span>
+              <div class="subscriptions__price-container">
+                <span class="subscriptions__price">2700</span>
+                <svg width="30" height="42" viewBox="0 0 30 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 6H10V17H18.5C21.5376 17 24 14.5376 24 11.5C24 8.46243 21.5376 6 18.5 6ZM4 0V23H18.5C24.8513 23 30 17.8513 30 11.5C30 5.14873 24.8513 0 18.5 0H4Z" fill="#102654" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17H6V23H0V17Z" fill="#102654" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.65854 28.3214V18H9.65854V28.3214H21V34.3214H9.65854V42H3.65854V34.3214H0V28.3214H3.65854Z" fill="#102654" />
+                </svg>
+              </div>
+              <a class="subscriptions__buy-link" href="#">купить абонемент</a>
+            </li>
           </ul>
         </div>
-        <ul class="subscriptions__tabs-list">
-          <li>
-            <h3>С тренером</h3>
-            <p>12 занятий</p>
-            <span class="subscriptions__bg-price">5000</span>
-            <div class="subscriptions__price-container">
-              <span class="subscriptions__price">5000</span>
-              <svg width="30" height="42" viewBox="0 0 30 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 6H10V17H18.5C21.5376 17 24 14.5376 24 11.5C24 8.46243 21.5376 6 18.5 6ZM4 0V23H18.5C24.8513 23 30 17.8513 30 11.5C30 5.14873 24.8513 0 18.5 0H4Z" fill="#102654" />
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17H6V23H0V17Z" fill="#102654" />
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.65854 28.3214V18H9.65854V28.3214H21V34.3214H9.65854V42H3.65854V34.3214H0V28.3214H3.65854Z" fill="#102654" />
-              </svg>
-            </div>
-            <a class="subscriptions__buy-link" href="#">купить абонемент</a>
-          </li>
-          <li>
-            <h3>Дневной</h3>
-            <p>с 8:00 до 17:00</p>
-            <span class="subscriptions__bg-price">1700</span>
-            <div class="subscriptions__price-container">
-              <span class="subscriptions__price">1700</span>
-              <svg width="30" height="42" viewBox="0 0 30 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 6H10V17H18.5C21.5376 17 24 14.5376 24 11.5C24 8.46243 21.5376 6 18.5 6ZM4 0V23H18.5C24.8513 23 30 17.8513 30 11.5C30 5.14873 24.8513 0 18.5 0H4Z" fill="#102654" />
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17H6V23H0V17Z" fill="#102654" />
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.65854 28.3214V18H9.65854V28.3214H21V34.3214H9.65854V42H3.65854V34.3214H0V28.3214H3.65854Z" fill="#102654" />
-              </svg>
-            </div>
-            <a class="subscriptions__buy-link" href="#">купить абонемент</a>
-          </li>
-          <li>
-            <h3>Полный день</h3>
-            <p>с 8:00 до 22:00</p>
-            <span class="subscriptions__bg-price">2700</span>
-            <div class="subscriptions__price-container">
-              <span class="subscriptions__price">2700</span>
-              <svg width="30" height="42" viewBox="0 0 30 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 6H10V17H18.5C21.5376 17 24 14.5376 24 11.5C24 8.46243 21.5376 6 18.5 6ZM4 0V23H18.5C24.8513 23 30 17.8513 30 11.5C30 5.14873 24.8513 0 18.5 0H4Z" fill="#102654" />
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17H6V23H0V17Z" fill="#102654" />
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.65854 28.3214V18H9.65854V28.3214H21V34.3214H9.65854V42H3.65854V34.3214H0V28.3214H3.65854Z" fill="#102654" />
-              </svg>
-            </div>
-            <a class="subscriptions__buy-link" href="#">купить абонемент</a>
-          </li>
-        </ul>
-        <ul class="subscriptions__tabs-list">
-          <li>
-            <h3>С тренером</h3>
-            <p>72 занятия</p>
-            <span class="subscriptions__bg-price">30000</span>
-            <div class="subscriptions__price-container">
-              <span class="subscriptions__price">30000</span>
-              <svg width="30" height="42" viewBox="0 0 30 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 6H10V17H18.5C21.5376 17 24 14.5376 24 11.5C24 8.46243 21.5376 6 18.5 6ZM4 0V23H18.5C24.8513 23 30 17.8513 30 11.5C30 5.14873 24.8513 0 18.5 0H4Z" fill="#102654" />
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17H6V23H0V17Z" fill="#102654" />
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.65854 28.3214V18H9.65854V28.3214H21V34.3214H9.65854V42H3.65854V34.3214H0V28.3214H3.65854Z" fill="#102654" />
-              </svg>
-            </div>
-            <a class="subscriptions__buy-link" href="#">купить абонемент</a>
-          </li>
-          <li>
-            <h3>Дневной</h3>
-            <p>с 8:00 до 17:00</p>
-            <span class="subscriptions__bg-price">10200</span>
-            <div class="subscriptions__price-container">
-              <span class="subscriptions__price">10200</span>
-              <svg width="30" height="42" viewBox="0 0 30 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 6H10V17H18.5C21.5376 17 24 14.5376 24 11.5C24 8.46243 21.5376 6 18.5 6ZM4 0V23H18.5C24.8513 23 30 17.8513 30 11.5C30 5.14873 24.8513 0 18.5 0H4Z" fill="#102654" />
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17H6V23H0V17Z" fill="#102654" />
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.65854 28.3214V18H9.65854V28.3214H21V34.3214H9.65854V42H3.65854V34.3214H0V28.3214H3.65854Z" fill="#102654" />
-              </svg>
-            </div>
-            <a class="subscriptions__buy-link" href="#">купить абонемент</a>
-          </li>
-          <li>
-            <h3>Полный день</h3>
-            <p>с 8:00 до 22:00</p>
-            <span class="subscriptions__bg-price">16200</span>
-            <div class="subscriptions__price-container">
-              <span class="subscriptions__price">16200</span>
-              <svg width="30" height="42" viewBox="0 0 30 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 6H10V17H18.5C21.5376 17 24 14.5376 24 11.5C24 8.46243 21.5376 6 18.5 6ZM4 0V23H18.5C24.8513 23 30 17.8513 30 11.5C30 5.14873 24.8513 0 18.5 0H4Z" fill="#102654" />
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17H6V23H0V17Z" fill="#102654" />
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.65854 28.3214V18H9.65854V28.3214H21V34.3214H9.65854V42H3.65854V34.3214H0V28.3214H3.65854Z" fill="#102654" />
-              </svg>
-            </div>
-            <a class="subscriptions__buy-link" href="#">купить абонемент</a>
-          </li>
-        </ul>
-        <ul class="subscriptions__tabs-list">
-          <li>
-            <h3>С тренером</h3>
-            <p>144 занятия</p>
-            <span class="subscriptions__bg-price">60000</span>
-            <div class="subscriptions__price-container">
-              <span class="subscriptions__price">60000</span>
-              <svg width="30" height="42" viewBox="0 0 30 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 6H10V17H18.5C21.5376 17 24 14.5376 24 11.5C24 8.46243 21.5376 6 18.5 6ZM4 0V23H18.5C24.8513 23 30 17.8513 30 11.5C30 5.14873 24.8513 0 18.5 0H4Z" fill="#102654" />
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17H6V23H0V17Z" fill="#102654" />
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.65854 28.3214V18H9.65854V28.3214H21V34.3214H9.65854V42H3.65854V34.3214H0V28.3214H3.65854Z" fill="#102654" />
-              </svg>
-            </div>
-            <a class="subscriptions__buy-link" href="#">купить абонемент</a>
-          </li>
-          <li>
-            <h3>Дневной</h3>
-            <p>с 8:00 до 17:00</p>
-            <span class="subscriptions__bg-price">20400</span>
-            <div class="subscriptions__price-container">
-              <span class="subscriptions__price">20400</span>
-              <svg width="30" height="42" viewBox="0 0 30 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 6H10V17H18.5C21.5376 17 24 14.5376 24 11.5C24 8.46243 21.5376 6 18.5 6ZM4 0V23H18.5C24.8513 23 30 17.8513 30 11.5C30 5.14873 24.8513 0 18.5 0H4Z" fill="#102654" />
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17H6V23H0V17Z" fill="#102654" />
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.65854 28.3214V18H9.65854V28.3214H21V34.3214H9.65854V42H3.65854V34.3214H0V28.3214H3.65854Z" fill="#102654" />
-              </svg>
-            </div>
-            <a class="subscriptions__buy-link" href="#">купить абонемент</a>
-          </li>
-          <li>
-            <h3>Полный день</h3>
-            <p>с 8:00 до 22:00</p>
-            <span class="subscriptions__bg-price">32400</span>
-            <div class="subscriptions__price-container">
-              <span class="subscriptions__price">32400</span>
-              <svg width="30" height="42" viewBox="0 0 30 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 6H10V17H18.5C21.5376 17 24 14.5376 24 11.5C24 8.46243 21.5376 6 18.5 6ZM4 0V23H18.5C24.8513 23 30 17.8513 30 11.5C30 5.14873 24.8513 0 18.5 0H4Z" fill="#102654" />
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17H6V23H0V17Z" fill="#102654" />
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.65854 28.3214V18H9.65854V28.3214H21V34.3214H9.65854V42H3.65854V34.3214H0V28.3214H3.65854Z" fill="#102654" />
-              </svg>
-            </div>
-            <a class="subscriptions__buy-link" href="#">купить абонемент</a>
-          </li>
-        </ul>
-      </div>
+
+        <div class="subscriptions__fragment" id="fragment-2">
+          <ul>
+            <li>
+              <h3>С тренером</h3>
+              <p>12 занятий</p>
+              <span class="subscriptions__bg-price">15000</span>
+              <div class="subscriptions__price-container">
+                <span class="subscriptions__price">15000</span>
+                <svg width="30" height="42" viewBox="0 0 30 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 6H10V17H18.5C21.5376 17 24 14.5376 24 11.5C24 8.46243 21.5376 6 18.5 6ZM4 0V23H18.5C24.8513 23 30 17.8513 30 11.5C30 5.14873 24.8513 0 18.5 0H4Z" fill="#102654" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17H6V23H0V17Z" fill="#102654" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.65854 28.3214V18H9.65854V28.3214H21V34.3214H9.65854V42H3.65854V34.3214H0V28.3214H3.65854Z" fill="#102654" />
+                </svg>
+              </div>
+              <a class="subscriptions__buy-link" href="#">купить абонемент</a>
+            </li>
+            <li>
+              <h3>Дневной</h3>
+              <p>с 8:00 до 17:00</p>
+              <span class="subscriptions__bg-price">11700</span>
+              <div class="subscriptions__price-container">
+                <span class="subscriptions__price">11700</span>
+                <svg width="30" height="42" viewBox="0 0 30 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 6H10V17H18.5C21.5376 17 24 14.5376 24 11.5C24 8.46243 21.5376 6 18.5 6ZM4 0V23H18.5C24.8513 23 30 17.8513 30 11.5C30 5.14873 24.8513 0 18.5 0H4Z" fill="#102654" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17H6V23H0V17Z" fill="#102654" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.65854 28.3214V18H9.65854V28.3214H21V34.3214H9.65854V42H3.65854V34.3214H0V28.3214H3.65854Z" fill="#102654" />
+                </svg>
+              </div>
+              <a class="subscriptions__buy-link" href="#">купить абонемент</a>
+            </li>
+            <li>
+              <h3>Полный день</h3>
+              <p>с 8:00 до 22:00</p>
+              <span class="subscriptions__bg-price">2700</span>
+              <div class="subscriptions__price-container">
+                <span class="subscriptions__price">2700</span>
+                <svg width="30" height="42" viewBox="0 0 30 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 6H10V17H18.5C21.5376 17 24 14.5376 24 11.5C24 8.46243 21.5376 6 18.5 6ZM4 0V23H18.5C24.8513 23 30 17.8513 30 11.5C30 5.14873 24.8513 0 18.5 0H4Z" fill="#102654" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17H6V23H0V17Z" fill="#102654" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.65854 28.3214V18H9.65854V28.3214H21V34.3214H9.65854V42H3.65854V34.3214H0V28.3214H3.65854Z" fill="#102654" />
+                </svg>
+              </div>
+              <a class="subscriptions__buy-link" href="#">купить абонемент</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="subscriptions__fragment" id="fragment-3">
+          <ul>
+            <li>
+              <h3>С тренером</h3>
+              <p>12 занятий</p>
+              <span class="subscriptions__bg-price">35000</span>
+              <div class="subscriptions__price-container">
+                <span class="subscriptions__price">55000</span>
+                <svg width="30" height="42" viewBox="0 0 30 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 6H10V17H18.5C21.5376 17 24 14.5376 24 11.5C24 8.46243 21.5376 6 18.5 6ZM4 0V23H18.5C24.8513 23 30 17.8513 30 11.5C30 5.14873 24.8513 0 18.5 0H4Z" fill="#102654" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17H6V23H0V17Z" fill="#102654" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.65854 28.3214V18H9.65854V28.3214H21V34.3214H9.65854V42H3.65854V34.3214H0V28.3214H3.65854Z" fill="#102654" />
+                </svg>
+              </div>
+              <a class="subscriptions__buy-link" href="#">купить абонемент</a>
+            </li>
+            <li>
+              <h3>Дневной</h3>
+              <p>с 8:00 до 17:00</p>
+              <span class="subscriptions__bg-price">1700</span>
+              <div class="subscriptions__price-container">
+                <span class="subscriptions__price">1700</span>
+                <svg width="30" height="42" viewBox="0 0 30 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 6H10V17H18.5C21.5376 17 24 14.5376 24 11.5C24 8.46243 21.5376 6 18.5 6ZM4 0V23H18.5C24.8513 23 30 17.8513 30 11.5C30 5.14873 24.8513 0 18.5 0H4Z" fill="#102654" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17H6V23H0V17Z" fill="#102654" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.65854 28.3214V18H9.65854V28.3214H21V34.3214H9.65854V42H3.65854V34.3214H0V28.3214H3.65854Z" fill="#102654" />
+                </svg>
+              </div>
+              <a class="subscriptions__buy-link" href="#">купить абонемент</a>
+            </li>
+            <li>
+              <h3>Полный день</h3>
+              <p>с 8:00 до 22:00</p>
+              <span class="subscriptions__bg-price">2700</span>
+              <div class="subscriptions__price-container">
+                <span class="subscriptions__price">2700</span>
+                <svg width="30" height="42" viewBox="0 0 30 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 6H10V17H18.5C21.5376 17 24 14.5376 24 11.5C24 8.46243 21.5376 6 18.5 6ZM4 0V23H18.5C24.8513 23 30 17.8513 30 11.5C30 5.14873 24.8513 0 18.5 0H4Z" fill="#102654" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17H6V23H0V17Z" fill="#102654" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.65854 28.3214V18H9.65854V28.3214H21V34.3214H9.65854V42H3.65854V34.3214H0V28.3214H3.65854Z" fill="#102654" />
+                </svg>
+              </div>
+              <a class="subscriptions__buy-link" href="#">купить абонемент</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- </div> -->
     </section>
+
     <section class="competition">
       <div class="competition__container">
         <div class="competition__info">
@@ -238,10 +265,132 @@
           <a class="competition__link" href="#">заполнить заявку</a>
         </div>
         <div class="competition__picture">
-          <img class="competition__img-desktop" src="img/Athlete-n-Dust.png" width="660" height="500" srcset="img/Athlete-n-Dust@2x.png 2x" alt="Спортсмен поднимает облако пыли">
-          <img class="competition__img-tablet" src="img/Athlete-n-Dust-tablet.png" width="386" height="292" srcset="img/Athlete-n-Dust-tablet@2x.png 2x" alt="Спортсмен поднимает облако пыли">
-          <img class="competition__img-mobile" src="img/Athlete-n-Dust-mobile.png" width="290" height="292" srcset="img/Athlete-n-Dust-mobile@2x.png 2x" alt="Спортсмен поднимает облако пыли">
+          <img class="competition__img-desktop" src="img/Athlete-n-Dust.png" width="660" height="500" srcset="img/Athlete-n-Dust.png, img/Athlete-n-Dust@2x.png 2x" alt="Спортсмен поднимает облако пыли">
+          <img class="competition__img-tablet" src="img/Athlete-n-Dust-tablet.png" width="386" height="292" srcset="img/Athlete-n-Dust-tablet.png, img/Athlete-n-Dust-tablet@2x.png 2x" alt="Спортсмен поднимает облако пыли">
+          <img class="competition__img-mobile" src="img/Athlete-n-Dust-mobile.png" width="290" height="292" srcset="img/Athlete-n-Dust-mobile.png, img/Athlete-n-Dust-mobile@2x.png 2x" alt="Спортсмен поднимает облако пыли">
         </div>
+      </div>
+    </section>
+
+    <section class="coaches">
+      <h2 class="coaches__title">Тренеры</h2>
+      <div class="coaches__container">
+        <button type="button" class="coaches__arrow-left" aria-label="Влево">
+          <svg width="18" height="34" viewBox="0 0 18 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 1L0.999999 17L17 33" stroke="#AFAFAF" />
+          </svg>
+        </button>
+        <button type="button" class="coaches__arrow-right" aria-label="Вправо">
+          <svg width="18" height="34" viewBox="0 0 18 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L17 17L1 33" stroke="#AFAFAF" />
+          </svg>
+        </button>
+        <ul class="coaches__list">
+          <li class="coaches__item">
+            <h3 class="coaches__name">Анна Павлова</h3>
+            <img class="coaches__photo" src="img/AnnaPavlova.png" width="260" height="294" alt="Анна Павлова">
+            <div class="coaches__info">
+              <h3 class="coaches__name-hover">Анна Павлова</h3>
+              <p>CrossFit</p>
+              <ul class="coaches__info-list">
+                <li>Certified Level 3 Trainer</li>
+                <li>Победитель чемпионата России по CrossFit </li>
+                <li>Опыт — 6 лет</li>
+              </ul>
+            </div>
+          </li>
+          <li class="coaches__item">
+            <h3 class="coaches__name">Алексей Лавров</h3>
+            <img class="coaches__photo" src="img/AlexLavrov.png" width="260" height="294" alt="Алексей Лавров">
+            <div class="coaches__info">
+              <h3 class="coaches__name-hover">Алексей Лавров</h3>
+              <p>CrossFit</p>
+              <ul class="coaches__info-list">
+                <li>Certified Level 3 Trainer</li>
+                <li>Победитель чемпионата России по CrossFit </li>
+                <li>Опыт — 6 лет</li>
+              </ul>
+            </div>
+          </li>
+          <li class="coaches__item">
+            <h3 class="coaches__name">Александр Пашков</h3>
+            <img class="coaches__photo" src="img/AlexPashkov.png" width="260" height="294" alt="Александр Пашков">
+            <div class="coaches__info">
+              <h3 class="coaches__name-hover">Александр Пашков</h3>
+              <p>CrossFit</p>
+              <ul class="coaches__info-list">
+                <li>Certified Level 3 Trainer</li>
+                <li>Победитель чемпионата России по CrossFit </li>
+                <li>Опыт — 6 лет</li>
+              </ul>
+            </div>
+          </li>
+          <li class="coaches__item">
+            <h3 class="coaches__name">Мария Кетова</h3>
+            <img class="coaches__photo" src="img/MaryKetova.png" width="260" height="294" alt="Мария Кетова">
+            <div class="coaches__info">
+              <h3 class="coaches__name-hover">Мария Кетова</h3>
+              <p>CrossFit</p>
+              <ul class="coaches__info-list">
+                <li>Certified Level 3 Trainer</li>
+                <li>Победитель чемпионата России по CrossFit </li>
+                <li>Опыт — 6 лет</li>
+              </ul>
+            </div>
+          </li>
+          <li class="coaches__item">
+            <h3 class="coaches__name">Алексей Лавров</h3>
+            <img class="coaches__photo" src="img/AlexLavrov.png" width="260" height="294" alt="Алексей Лавров">
+            <div class="coaches__info">
+              <h3 class="coaches__name-hover">Алексей Лавров</h3>
+              <p>CrossFit</p>
+              <ul class="coaches__info-list">
+                <li>Certified Level 3 Trainer</li>
+                <li>Победитель чемпионата России по CrossFit </li>
+                <li>Опыт — 6 лет</li>
+              </ul>
+            </div>
+          </li>
+          <li class="coaches__item">
+            <h3 class="coaches__name">Мария Кетова</h3>
+            <img class="coaches__photo" src="img/MaryKetova.png" width="260" height="294" alt="Мария Кетова">
+            <div class="coaches__info">
+              <h3 class="coaches__name-hover">Мария Кетова</h3>
+              <p>CrossFit</p>
+              <ul class="coaches__info-list">
+                <li>Certified Level 3 Trainer</li>
+                <li>Победитель чемпионата России по CrossFit </li>
+                <li>Опыт — 6 лет</li>
+              </ul>
+            </div>
+          </li>
+          <li class="coaches__item">
+            <h3 class="coaches__name">Анна Павлова</h3>
+            <img class="coaches__photo" src="img/AnnaPavlova.png" width="260" height="294" alt="Анна Павлова">
+            <div class="coaches__info">
+              <h3 class="coaches__name-hover">Анна Павлова</h3>
+              <p>CrossFit</p>
+              <ul class="coaches__info-list">
+                <li>Certified Level 3 Trainer</li>
+                <li>Победитель чемпионата России по CrossFit </li>
+                <li>Опыт — 6 лет</li>
+              </ul>
+            </div>
+          </li>
+          <li class="coaches__item">
+            <h3 class="coaches__name">Александр Пашков</h3>
+            <img class="coaches__photo" src="img/AlexPashkov.png" width="260" height="294" alt="Александр Пашков">
+            <div class="coaches__info">
+              <h3 class="coaches__name-hover">Александр Пашков</h3>
+              <p>CrossFit</p>
+              <ul class="coaches__info-list">
+                <li>Certified Level 3 Trainer</li>
+                <li>Победитель чемпионата России по CrossFit </li>
+                <li>Опыт — 6 лет</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -312,9 +461,9 @@
             <p class="advertising__main-text">Безлимитный абонемент в тренажерный зал</p>
             <a class="advertising__main-link" href="#">подробнее</a>
           </div>
-          <img class="advertising__img-desktop" src="img/LadyInBLue.png" width="280" height="462" srcset="img/LadyInBLue@2x.png 2x" alt="Девушка в синем спортивном костюме">
-          <img class="advertising__img-tablet" src="img/LadyInBLue-tablet.png" width="399" height="462" srcset="img/LadyInBLue-tablet@2x.png 2x" alt="Девушка в синем спортивном костюме">
-          <img class="advertising__img-mobile" src="img/LadyInBLue-mobile.png" width="290" height="299" srcset="img/LadyInBLue-mobile@2x.png 2x" alt="Девушка в синем спортивном костюме">
+          <img class="advertising__img-desktop" src="img/LadyInBLue.png" width="280" height="462" srcset="img/LadyInBLue.png, img/LadyInBLue@2x.png 2x" alt="Девушка в синем спортивном костюме">
+          <img class="advertising__img-tablet" src="img/LadyInBLue-tablet.png" width="399" height="462" srcset="img/LadyInBLue-tablet.png, img/LadyInBLue-tablet@2x.png 2x" alt="Девушка в синем спортивном костюме">
+          <img class="advertising__img-mobile" src="img/LadyInBLue-mobile.png" width="290" height="299" srcset="img/LadyInBLue-mobile.png, img/LadyInBLue-mobile@2x.png 2x" alt="Девушка в синем спортивном костюме">
         </div>
         <ul class="advertising__list">
           <li>
@@ -331,128 +480,44 @@
       </div>
     </section>
 
-    <section class="coaches" id="coaches">
-      <h2 class="coaches__title">Тренеры</h2>
-      <div class="coaches__container">
-        <button type="button" class="coaches__arrow-left no-js" aria-label="Влево">
+    <section class="reviews">
+      <h2 class="reviews__title">Отзывы</h2>
+      <div class="reviews__container">
+        <button type="button" class="reviews__arrow-left" aria-label="Стрелка влево">
           <svg width="18" height="34" viewBox="0 0 18 34" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M17 1L0.999999 17L17 33" stroke="#AFAFAF" />
           </svg>
         </button>
-        <button type="button" class="coaches__arrow-right no-js" aria-label="Вправо">
+        <button type="button" class="reviews__arrow-right" aria-label="Стрелка вправо">
           <svg width="18" height="34" viewBox="0 0 18 34" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 1L17 17L1 33" stroke="#AFAFAF" />
           </svg>
         </button>
-        <ul class="coaches__list coaches__list--no-js">
-          <li class="coaches__item">
-            <h3 class="coaches__name">Анна Павлова</h3>
-            <img class="coaches__photo" src="img/AnnaPavlova.png" width="260" height="294" alt="Анна Павлова">
-            <div class="coaches__info">
-              <h3 class="coaches__name-hover">Анна Павлова</h3>
-              <p>CrossFit</p>
-              <ul class="coaches__info-list">
-                <li>Certified Level 3 Trainer</li>
-                <li>Победитель чемпионата России по CrossFit </li>
-                <li>Опыт — 6 лет</li>
-              </ul>
+        <ul class="reviews__list">
+          <li class="reviews__item">
+            <div class="reviews__person">
+              <img class="reviews__avatar" src="img/AnnOrlova.png" width="80" height="80" alt="Аватарка">
+              <h3>Анна Орлова</h3>
             </div>
+            <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
           </li>
-          <li class="coaches__item">
-            <h3 class="coaches__name">Алексей Лавров</h3>
-            <img class="coaches__photo" src="img/AlexLavrov.png" width="260" height="294" alt="Алексей Лавров">
-            <div class="coaches__info">
-              <h3 class="coaches__name-hover">Алексей Лавров</h3>
-              <p>CrossFit</p>
-              <ul class="coaches__info-list">
-                <li>Certified Level 3 Trainer</li>
-                <li>Победитель чемпионата России по CrossFit </li>
-                <li>Опыт — 6 лет</li>
-              </ul>
+          <li class="reviews__item">
+            <div class="reviews__person">
+              <img class="reviews__avatar" src="img/AnnOrlova.png" width="80" height="80" alt="Аватарка">
+              <h3>Подснежник</h3>
             </div>
+            <p>«Январь на дворе, пора привести себя в форму»</p>
           </li>
-          <li class="coaches__item">
-            <h3 class="coaches__name">Александр Пашков</h3>
-            <img class="coaches__photo" src="img/AlexPashkov.png" width="260" height="294" alt="Александр Пашков">
-            <div class="coaches__info">
-              <h3 class="coaches__name-hover">Александр Пашков</h3>
-              <p>CrossFit</p>
-              <ul class="coaches__info-list">
-                <li>Certified Level 3 Trainer</li>
-                <li>Победитель чемпионата России по CrossFit </li>
-                <li>Опыт — 6 лет</li>
-              </ul>
+          <li class="reviews__item">
+            <div class="reviews__person">
+              <img class="reviews__avatar" src="img/AnnOrlova.png" width="80" height="80" alt="Аватарка">
+              <h3>Эйс Вентура</h3>
             </div>
-          </li>
-          <li class="coaches__item">
-            <h3 class="coaches__name">Мария Кетова</h3>
-            <img class="coaches__photo" src="img/MaryKetova.png" width="260" height="294" alt="Мария Кетова">
-            <div class="coaches__info">
-              <h3 class="coaches__name-hover">Мария Кетова</h3>
-              <p>CrossFit</p>
-              <ul class="coaches__info-list">
-                <li>Certified Level 3 Trainer</li>
-                <li>Победитель чемпионата России по CrossFit </li>
-                <li>Опыт — 6 лет</li>
-              </ul>
-            </div>
-          </li>
-          <li class="coaches__item">
-            <h3 class="coaches__name">Алексей Лавров</h3>
-            <img class="coaches__photo" src="img/AlexLavrov.png" width="260" height="294" alt="Алексей Лавров">
-            <div class="coaches__info">
-              <h3 class="coaches__name-hover">Алексей Лавров</h3>
-              <p>CrossFit</p>
-              <ul class="coaches__info-list">
-                <li>Certified Level 3 Trainer</li>
-                <li>Победитель чемпионата России по CrossFit </li>
-                <li>Опыт — 6 лет</li>
-              </ul>
-            </div>
-          </li>
-          <li class="coaches__item">
-            <h3 class="coaches__name">Мария Кетова</h3>
-            <img class="coaches__photo" src="img/MaryKetova.png" width="260" height="294" alt="Мария Кетова">
-            <div class="coaches__info">
-              <h3 class="coaches__name-hover">Мария Кетова</h3>
-              <p>CrossFit</p>
-              <ul class="coaches__info-list">
-                <li>Certified Level 3 Trainer</li>
-                <li>Победитель чемпионата России по CrossFit </li>
-                <li>Опыт — 6 лет</li>
-              </ul>
-            </div>
-          </li>
-          <li class="coaches__item">
-            <h3 class="coaches__name">Анна Павлова</h3>
-            <img class="coaches__photo" src="img/AnnaPavlova.png" width="260" height="294" alt="Анна Павлова">
-            <div class="coaches__info">
-              <h3 class="coaches__name-hover">Анна Павлова</h3>
-              <p>CrossFit</p>
-              <ul class="coaches__info-list">
-                <li>Certified Level 3 Trainer</li>
-                <li>Победитель чемпионата России по CrossFit </li>
-                <li>Опыт — 6 лет</li>
-              </ul>
-            </div>
-          </li>
-          <li class="coaches__item">
-            <h3 class="coaches__name">Александр Пашков</h3>
-            <img class="coaches__photo" src="img/AlexPashkov.png" width="260" height="294" alt="Александр Пашков">
-            <div class="coaches__info">
-              <h3 class="coaches__name-hover">Александр Пашков</h3>
-              <p>CrossFit</p>
-              <ul class="coaches__info-list">
-                <li>Certified Level 3 Trainer</li>
-                <li>Победитель чемпионата России по CrossFit </li>
-                <li>Опыт — 6 лет</li>
-              </ul>
-            </div>
+            <p>«В состязании всегда есть приключение.»</p>
           </li>
         </ul>
       </div>
     </section>
-
   </main>
 
   <footer class="footer">
@@ -490,10 +555,15 @@
 
     <div class="footer__bottom-wrapper">
       <div class="footer__bottom-section">
-        <a href="#" class="footer__bottom-link">
+        <a href="#" class="footer__bottom-link footer__bottom-link--logo-top">
           <img class="footer__logo-image" src="img/Supergym.svg" alt="Логотип SuperGym" width="89" height="20">
         </a>
         <ul class="footer__bottom-nav-list">
+          <li class="footer__bottom-item footer__bottom-item--list-logo">
+            <a href="#" class="footer__bottom-link">
+              <img class="footer__logo-image" src="img/Supergym.svg" alt="Логотип SuperGym" width="89" height="20">
+            </a>
+          </li>
           <li class="footer__bottom-item">
             <a class="footer__bottom-link" href="#">Услуги</a>
           </li>
@@ -550,7 +620,15 @@
   </footer>
 
   <script src="https://unpkg.com/imask"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
   <script src="js/scroll-subscription.js"></script>
+  <script src="js/main.js"></script>
   <script src="js/vendor.js"></script>
 </body>
 
