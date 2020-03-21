@@ -11,6 +11,7 @@ if (element) {
 
 var coachesContainer = document.querySelector('.coaches__container');
 var coachesList = document.querySelector('.coaches__list');
+
 // coaches-carousel
 $(coachesList).slick({
   dots: true,

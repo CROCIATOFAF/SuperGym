@@ -21,7 +21,7 @@
     "posthtml-include": "^1.2.0",
     "stylelint": "9.10.x",
     "stylelint-config-htmlacademy": "0.1.x",
-    "eslint": "6.8.0",
+    "eslint": "4.16.0",
     "eslint-config-htmlacademy": "0.4.x"
   },
   "scripts": {
@@ -50,8 +50,6 @@
     "node": "8.15"
   },
   "dependencies": {
-    "del": "^4.1.1",
-    "imask": "^6.0.3",
-    "jquery-mask-plugin": "^1.14.16"
+    "del": "^4.1.1"
   }
 }

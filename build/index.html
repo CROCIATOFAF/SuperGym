@@ -80,171 +80,132 @@
       </div>
     </section>
 
-    <section class="subscriptions">
-      <h3 class="subscriptions__header">Абонементы</h3>
-
-      <div class="subscriptions__tabs">
-        <!--ex-wraps-->
-
-        <!-- <div class="subscriptions__controls-wrap"> -->
-        <ul class="subscriptions__controls-list">
+    <section class="subscriptions" id="subscriptions">
+      <div class="subscriptions__wrap">
+        <h2 class="subscriptions__header">Абонементы</h2>
+        <div class="subscriptions__controls-wrap">
+          <ul class="subscriptions__controls-list">
+            <li><span class="subscriptions__item-month subscriptions__item-month--active">1 месяц</span></li>
+            <li><span class="subscriptions__item-month">6 месяцев</span></li>
+            <li><span class="subscriptions__item-month">12 месяцев</span></li>
+          </ul>
+        </div>
+        <ul class="subscriptions__tabs-list">
           <li>
-            <a class="subscriptions__item-month" href="#fragment-1">1 месяц</a>
+            <h3>С тренером</h3>
+            <p>12 занятий</p>
+            <span class="subscriptions__bg-price">5000</span>
+            <div class="subscriptions__price-container">
+              <span class="subscriptions__price">5000</span>
+              <svg class="subscriptions__price-ruble" width="30" height="42">
+                <use xlink:href="#ruble"></use>
+              </svg>
+            </div>
+            <a class="subscriptions__buy-link" href="#">купить абонемент</a>
           </li>
           <li>
-            <a class="subscriptions__item-month" href="#fragment-2">6 месяцев</a>
+            <h3>Дневной</h3>
+            <p>с 8:00 до 17:00</p>
+            <span class="subscriptions__bg-price">1700</span>
+            <div class="subscriptions__price-container">
+              <span class="subscriptions__price">1700</span>
+              <svg class="subscriptions__price-ruble" width="30" height="42">
+                <use xlink:href="#ruble"></use>
+              </svg>
+            </div>
+            <a class="subscriptions__buy-link" href="#">купить абонемент</a>
           </li>
           <li>
-            <a class="subscriptions__item-month" href="#fragment-3">12 месяцев</a>
+            <h3>Полный день</h3>
+            <p>с 8:00 до 22:00</p>
+            <span class="subscriptions__bg-price">2700</span>
+            <div class="subscriptions__price-container">
+              <span class="subscriptions__price">2700</span>
+              <svg class="subscriptions__price-ruble" width="30" height="42">
+                <use xlink:href="#ruble"></use>
+              </svg>
+            </div>
+            <a class="subscriptions__buy-link" href="#">купить абонемент</a>
           </li>
         </ul>
-        <!-- </div> -->
-
-        <!-- <div class="subscriptions__content"> -->
-        <!-- tabs-list -->
-        <div class="subscriptions__fragment" id="fragment-1">
-          <ul>
-            <li>
-              <h3>С тренером</h3>
-              <p>12 занятий</p>
-              <span class="subscriptions__bg-price">5000</span>
-              <div class="subscriptions__price-container">
-                <span class="subscriptions__price">5000</span>
-                <svg width="30" height="42" viewBox="0 0 30 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 6H10V17H18.5C21.5376 17 24 14.5376 24 11.5C24 8.46243 21.5376 6 18.5 6ZM4 0V23H18.5C24.8513 23 30 17.8513 30 11.5C30 5.14873 24.8513 0 18.5 0H4Z" fill="#102654"></path>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17H6V23H0V17Z" fill="#102654"></path>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.65854 28.3214V18H9.65854V28.3214H21V34.3214H9.65854V42H3.65854V34.3214H0V28.3214H3.65854Z" fill="#102654"></path>
-                </svg>
-              </div>
-              <a class="subscriptions__buy-link" href="#">купить абонемент</a>
-            </li>
-            <li>
-              <h3>Дневной</h3>
-              <p>с 8:00 до 17:00</p>
-              <span class="subscriptions__bg-price">1700</span>
-              <div class="subscriptions__price-container">
-                <span class="subscriptions__price">1700</span>
-                <svg width="30" height="42" viewBox="0 0 30 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 6H10V17H18.5C21.5376 17 24 14.5376 24 11.5C24 8.46243 21.5376 6 18.5 6ZM4 0V23H18.5C24.8513 23 30 17.8513 30 11.5C30 5.14873 24.8513 0 18.5 0H4Z" fill="#102654"></path>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17H6V23H0V17Z" fill="#102654"></path>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.65854 28.3214V18H9.65854V28.3214H21V34.3214H9.65854V42H3.65854V34.3214H0V28.3214H3.65854Z" fill="#102654"></path>
-                </svg>
-              </div>
-              <a class="subscriptions__buy-link" href="#">купить абонемент</a>
-            </li>
-            <li>
-              <h3>Полный день</h3>
-              <p>с 8:00 до 22:00</p>
-              <span class="subscriptions__bg-price">2700</span>
-              <div class="subscriptions__price-container">
-                <span class="subscriptions__price">2700</span>
-                <svg width="30" height="42" viewBox="0 0 30 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 6H10V17H18.5C21.5376 17 24 14.5376 24 11.5C24 8.46243 21.5376 6 18.5 6ZM4 0V23H18.5C24.8513 23 30 17.8513 30 11.5C30 5.14873 24.8513 0 18.5 0H4Z" fill="#102654"></path>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17H6V23H0V17Z" fill="#102654"></path>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.65854 28.3214V18H9.65854V28.3214H21V34.3214H9.65854V42H3.65854V34.3214H0V28.3214H3.65854Z" fill="#102654"></path>
-                </svg>
-              </div>
-              <a class="subscriptions__buy-link" href="#">купить абонемент</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="subscriptions__fragment" id="fragment-2">
-          <ul>
-            <li>
-              <h3>С тренером</h3>
-              <p>12 занятий</p>
-              <span class="subscriptions__bg-price">15000</span>
-              <div class="subscriptions__price-container">
-                <span class="subscriptions__price">15000</span>
-                <svg width="30" height="42" viewBox="0 0 30 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 6H10V17H18.5C21.5376 17 24 14.5376 24 11.5C24 8.46243 21.5376 6 18.5 6ZM4 0V23H18.5C24.8513 23 30 17.8513 30 11.5C30 5.14873 24.8513 0 18.5 0H4Z" fill="#102654"></path>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17H6V23H0V17Z" fill="#102654"></path>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.65854 28.3214V18H9.65854V28.3214H21V34.3214H9.65854V42H3.65854V34.3214H0V28.3214H3.65854Z" fill="#102654"></path>
-                </svg>
-              </div>
-              <a class="subscriptions__buy-link" href="#">купить абонемент</a>
-            </li>
-            <li>
-              <h3>Дневной</h3>
-              <p>с 8:00 до 17:00</p>
-              <span class="subscriptions__bg-price">11700</span>
-              <div class="subscriptions__price-container">
-                <span class="subscriptions__price">11700</span>
-                <svg width="30" height="42" viewBox="0 0 30 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 6H10V17H18.5C21.5376 17 24 14.5376 24 11.5C24 8.46243 21.5376 6 18.5 6ZM4 0V23H18.5C24.8513 23 30 17.8513 30 11.5C30 5.14873 24.8513 0 18.5 0H4Z" fill="#102654"></path>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17H6V23H0V17Z" fill="#102654"></path>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.65854 28.3214V18H9.65854V28.3214H21V34.3214H9.65854V42H3.65854V34.3214H0V28.3214H3.65854Z" fill="#102654"></path>
-                </svg>
-              </div>
-              <a class="subscriptions__buy-link" href="#">купить абонемент</a>
-            </li>
-            <li>
-              <h3>Полный день</h3>
-              <p>с 8:00 до 22:00</p>
-              <span class="subscriptions__bg-price">2700</span>
-              <div class="subscriptions__price-container">
-                <span class="subscriptions__price">2700</span>
-                <svg width="30" height="42" viewBox="0 0 30 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 6H10V17H18.5C21.5376 17 24 14.5376 24 11.5C24 8.46243 21.5376 6 18.5 6ZM4 0V23H18.5C24.8513 23 30 17.8513 30 11.5C30 5.14873 24.8513 0 18.5 0H4Z" fill="#102654"></path>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17H6V23H0V17Z" fill="#102654"></path>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.65854 28.3214V18H9.65854V28.3214H21V34.3214H9.65854V42H3.65854V34.3214H0V28.3214H3.65854Z" fill="#102654"></path>
-                </svg>
-              </div>
-              <a class="subscriptions__buy-link" href="#">купить абонемент</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="subscriptions__fragment" id="fragment-3">
-          <ul>
-            <li>
-              <h3>С тренером</h3>
-              <p>12 занятий</p>
-              <span class="subscriptions__bg-price">35000</span>
-              <div class="subscriptions__price-container">
-                <span class="subscriptions__price">55000</span>
-                <svg width="30" height="42" viewBox="0 0 30 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 6H10V17H18.5C21.5376 17 24 14.5376 24 11.5C24 8.46243 21.5376 6 18.5 6ZM4 0V23H18.5C24.8513 23 30 17.8513 30 11.5C30 5.14873 24.8513 0 18.5 0H4Z" fill="#102654"></path>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17H6V23H0V17Z" fill="#102654"></path>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.65854 28.3214V18H9.65854V28.3214H21V34.3214H9.65854V42H3.65854V34.3214H0V28.3214H3.65854Z" fill="#102654"></path>
-                </svg>
-              </div>
-              <a class="subscriptions__buy-link" href="#">купить абонемент</a>
-            </li>
-            <li>
-              <h3>Дневной</h3>
-              <p>с 8:00 до 17:00</p>
-              <span class="subscriptions__bg-price">1700</span>
-              <div class="subscriptions__price-container">
-                <span class="subscriptions__price">1700</span>
-                <svg width="30" height="42" viewBox="0 0 30 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 6H10V17H18.5C21.5376 17 24 14.5376 24 11.5C24 8.46243 21.5376 6 18.5 6ZM4 0V23H18.5C24.8513 23 30 17.8513 30 11.5C30 5.14873 24.8513 0 18.5 0H4Z" fill="#102654"></path>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17H6V23H0V17Z" fill="#102654"></path>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.65854 28.3214V18H9.65854V28.3214H21V34.3214H9.65854V42H3.65854V34.3214H0V28.3214H3.65854Z" fill="#102654"></path>
-                </svg>
-              </div>
-              <a class="subscriptions__buy-link" href="#">купить абонемент</a>
-            </li>
-            <li>
-              <h3>Полный день</h3>
-              <p>с 8:00 до 22:00</p>
-              <span class="subscriptions__bg-price">2700</span>
-              <div class="subscriptions__price-container">
-                <span class="subscriptions__price">2700</span>
-                <svg width="30" height="42" viewBox="0 0 30 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 6H10V17H18.5C21.5376 17 24 14.5376 24 11.5C24 8.46243 21.5376 6 18.5 6ZM4 0V23H18.5C24.8513 23 30 17.8513 30 11.5C30 5.14873 24.8513 0 18.5 0H4Z" fill="#102654"></path>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17H6V23H0V17Z" fill="#102654"></path>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.65854 28.3214V18H9.65854V28.3214H21V34.3214H9.65854V42H3.65854V34.3214H0V28.3214H3.65854Z" fill="#102654"></path>
-                </svg>
-              </div>
-              <a class="subscriptions__buy-link" href="#">купить абонемент</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- </div> -->
-    </div></section>
+        <ul class="subscriptions__tabs-list">
+          <li>
+            <h3>С тренером</h3>
+            <p>72 занятия</p>
+            <span class="subscriptions__bg-price">30000</span>
+            <div class="subscriptions__price-container">
+              <span class="subscriptions__price">30000</span>
+              <svg class="subscriptions__price-ruble" width="30" height="42">
+                <use xlink:href="#ruble"></use>
+              </svg>
+            </div>
+            <a class="subscriptions__buy-link" href="#">купить абонемент</a>
+          </li>
+          <li>
+            <h3>Дневной</h3>
+            <p>с 8:00 до 17:00</p>
+            <span class="subscriptions__bg-price">10200</span>
+            <div class="subscriptions__price-container">
+              <span class="subscriptions__price">10200</span>
+              <svg class="subscriptions__price-ruble" width="30" height="42">
+                <use xlink:href="#ruble"></use>
+              </svg>
+            </div>
+            <a class="subscriptions__buy-link" href="#">купить абонемент</a>
+          </li>
+          <li>
+            <h3>Полный день</h3>
+            <p>с 8:00 до 22:00</p>
+            <span class="subscriptions__bg-price">16200</span>
+            <div class="subscriptions__price-container">
+              <span class="subscriptions__price">16200</span>
+              <svg class="subscriptions__price-ruble" width="30" height="42">
+                <use xlink:href="#ruble"></use>
+              </svg>
+            </div>
+            <a class="subscriptions__buy-link" href="#">купить абонемент</a>
+          </li>
+        </ul>
+        <ul class="subscriptions__tabs-list">
+          <li>
+            <h3>С тренером</h3>
+            <p>144 занятия</p>
+            <span class="subscriptions__bg-price">60000</span>
+            <div class="subscriptions__price-container">
+              <span class="subscriptions__price">60000</span>
+              <svg class="subscriptions__price-ruble" width="30" height="42">
+                <use xlink:href="#ruble"></use>
+              </svg>
+            </div>
+            <a class="subscriptions__buy-link" href="#">купить абонемент</a>
+          </li>
+          <li>
+            <h3>Дневной</h3>
+            <p>с 8:00 до 17:00</p>
+            <span class="subscriptions__bg-price">20400</span>
+            <div class="subscriptions__price-container">
+              <span class="subscriptions__price">20400</span>
+              <svg class="subscriptions__price-ruble" width="30" height="42">
+                <use xlink:href="#ruble"></use>
+              </svg>
+            </div>
+            <a class="subscriptions__buy-link" href="#">купить абонемент</a>
+          </li>
+          <li>
+            <h3>Полный день</h3>
+            <p>с 8:00 до 22:00</p>
+            <span class="subscriptions__bg-price">32400</span>
+            <div class="subscriptions__price-container">
+              <span class="subscriptions__price">32400</span>
+              <svg class="subscriptions__price-ruble" width="30" height="42">
+                <use xlink:href="#ruble"></use>
+              </svg>
+            </div>
+            <a class="subscriptions__buy-link" href="#">купить абонемент</a>
+          </li>
+        </ul>
+      </div>
+    </section>
 
     <section class="competition">
       <div class="competition__container">
@@ -620,7 +581,6 @@
 
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-  <script src="js/scroll-subscription.js"></script>
   <script src="js/main.js"></script>
   <script src="js/vendor.js"></script>
 </body>
