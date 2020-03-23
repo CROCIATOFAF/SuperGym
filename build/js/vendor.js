@@ -1,5 +1,5 @@
 'use strict';
-
+// mask
 var element = document.getElementById('tel');
 
 if (element) {
