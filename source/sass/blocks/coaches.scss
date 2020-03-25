@@ -119,6 +119,7 @@
   cursor: pointer;
   position: absolute;
   top: 131px;
+  outline: none;
 
   &:hover,
   &:focus {
@@ -221,7 +222,7 @@
 
   .coaches__arrow-left svg,
   .coaches__arrow-right svg {
-    width: 10px;
+    width: 25px;
     height: 19px;
   }
 

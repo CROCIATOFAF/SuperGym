@@ -14,7 +14,7 @@ var coachesList = document.querySelector('.coaches__list');
 
 // coaches-carousel
 $(coachesList).slick({
-  dots: true,
+  dots: false,
   infinite: false,
   speed: 300,
   slidesToShow: 4,
@@ -29,7 +29,7 @@ $(coachesList).slick({
         slidesToShow: 2,
         slidesToScroll: 2,
         infinite: true,
-        dots: true
+        dots: false
       }
     },
     {
@@ -38,26 +38,23 @@ $(coachesList).slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        dots: true
+        dots: false
       }
     }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
   ]
 });
 
 // visitor-review.scss
-var reviewsContainer = document.querySelector('.reviews__container');
-var reviewsList = document.querySelector('.reviews__list');
+var reviewsContainer = document.querySelector('.visitor-review__container');
+var reviewsList = document.querySelector('.visitor-review__list');
 $(reviewsList).slick({
-  dots: true,
+  dots: false,
   infinite: false,
   speed: 300,
   slidesToShow: 1,
   slidesToScroll: 1,
   adaptiveHeight: true,
   arrows: true,
-  prevArrow: reviewsContainer.querySelector('.reviews__arrow-left'),
-  nextArrow: reviewsContainer.querySelector('.reviews__arrow-right')
+  prevArrow: reviewsContainer.querySelector('.visitor-review__arrow-left'),
+  nextArrow: reviewsContainer.querySelector('.visitor-review__arrow-right')
 });

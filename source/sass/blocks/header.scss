@@ -1,5 +1,5 @@
 .header {
-  background: url("../img/header-background.webp") #1b2d37;
+  background: url("../img/header-background.jpg") #1b2d37;
   min-height: 658px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -8,7 +8,7 @@
   overflow: hidden;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/header-background@2x.webp");
+    background-image: url("../img/header-background@2x.jpg");
     background-size: 100% 100%;
   }
 }
