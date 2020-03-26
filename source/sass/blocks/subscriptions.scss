@@ -12,7 +12,13 @@
     bottom: -150px;
     right: 0;
     z-index: 1;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/pink-plates@2x.png");
+      background-size: 100% 100%;
+    }
   }
+
 }
 
 .subscriptions__wrap {
@@ -189,11 +195,16 @@
 @media (max-width: $tablet-width) {
   .subscriptions {
     &::after {
-      width: 347px;
-      height: 444px;
-      background: url("../img/pink-plates.png") no-repeat center;
-      bottom: -125px;
+      width: 380px;
+      height: 345px;
+      background: url("../img/pink-plates-tablet.png") no-repeat center;
+      bottom: -73px;
       right: 0;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/pink-plates-tablet.png");
+        background-size: 100% 100%;
+      }
     }
   }
 
