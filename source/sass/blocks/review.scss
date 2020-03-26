@@ -172,6 +172,7 @@
   .review__header {
     @include section-header-mobile;
     margin: 0;
+    text-align: left;
   }
 
   .review__photo-desktop,

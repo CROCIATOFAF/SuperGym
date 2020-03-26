@@ -2,14 +2,14 @@
   max-width: 1366px;
   margin: 0 auto;
   padding: 0 103px;
-  padding-bottom: 90px;
+  padding-bottom: 120px;
 }
 
 .visitor-review__title {
   @include section-header-desktop;
   color: $main-text-color;
   text-align: center;
-  margin: 0 0 53px 0;
+  margin: 0 0 54px 0;
 }
 
 .visitor-review__container {
@@ -94,7 +94,7 @@
   .visitor-review {
     max-width: 1199px;
     margin: 0 auto;
-    padding: 0 101px 70px;
+    padding: 0 101px 101px;
   }
 
   .visitor-review__title {
@@ -120,12 +120,12 @@
   .visitor-review {
     max-width: 767px;
     margin: 0 auto;
-    padding: 0 47px 40px;
+    padding: 0 47px 70px;
   }
 
   .visitor-review__title {
     @include section-header-mobile;
-    margin: 0 0 45px 0;
+    margin: 0 0 44px 0;
   }
 
   .visitor-review__person {

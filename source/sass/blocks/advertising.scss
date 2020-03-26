@@ -11,7 +11,7 @@
   @include section-header-desktop;
   color: $main-text-color;
   text-align: center;
-  margin-bottom: 53px;
+  margin-bottom: 51px;
 }
 
 .advertising__img-tablet,
@@ -102,7 +102,7 @@
   border-width: 7px;
   border-image: linear-gradient(to bottom right, $gradient-color-top, $gradient-color-bottom);
   border-image-slice: 1;
-  padding: 25px 28px 28px;
+  padding: 25px 28px 31px;
   margin-bottom: 39px;
 }
 
@@ -154,7 +154,7 @@
     max-width: 1199px;
     margin: 0 auto;
     padding: 0 45px;
-    padding-top: 65px;
+    padding-top: 64px;
     padding-bottom: 98px;
   }
 

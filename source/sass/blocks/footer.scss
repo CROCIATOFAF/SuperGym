@@ -8,13 +8,15 @@
   padding-left: 103px;
   padding-right: 103px;
   padding-top: 44px;
-  padding-bottom: 44px;
+  padding-bottom: 36px;
   display: flex;
   justify-content: space-between;
 }
 
 .footer__bottom-nav-list {
   list-style: none;
+  position: relative;
+  left: 10px;
 
   @include no-marg-padd;
   display: flex;
@@ -24,6 +26,8 @@
   list-style: none;
   display: flex;
   align-items: center;
+  position: relative;
+  top: -3px;
 
   @include no-marg-padd;
 }
@@ -94,14 +98,14 @@
 .footer__form {
   width: 50%;
   background: transparent;
-  padding-top: 67px;
+  padding-top: 60px;
 }
 
 .footer__form-header {
   @include section-header-desktop;
   line-height: 64px;
   color: $second-text-color;
-  margin: 0 0 40px 0;
+  margin: 0 0 31px 0;
 }
 
 .footer__form-input {
@@ -147,7 +151,7 @@
   padding: 17px 0;
   cursor: pointer;
   width: 410px;
-  margin-top: 27px;
+  margin-top: 28px;
 
   &:hover,
   &:focus {
@@ -309,6 +313,8 @@
 @media (max-width: $tablet-width) {
   .footer__bottom-social-list {
     align-items: center;
+    position: relative;
+    top: -3px;
   }
 
   .footer__bottom-section {
@@ -317,7 +323,7 @@
     padding-left: 45px;
     padding-right: 45px;
     padding-top: 47px;
-    padding-bottom: 47px;
+    padding-bottom: 39px;
   }
 
   .footer__bottom-item {
@@ -425,6 +431,8 @@
   .footer__nav-list {
     max-width: 400px;
     margin-left: 19px;
+    position: relative;
+    left: 9px;
   }
 
   .footer__social-list {
@@ -433,6 +441,15 @@
 
   .footer__bottom-item--list-logo {
     display: none;
+  }
+
+  .footer__logo-image {
+    width: 82px;
+    height: 18px;
+  }
+
+  .footer__form-button {
+    margin-top: 27px;
   }
 }
 
@@ -456,7 +473,7 @@
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 15px;
     flex-direction: column;
   }
 
@@ -533,6 +550,7 @@
   .footer__contacts-header {
     @include section-header-mobile;
     margin: 0 0 41px 0;
+    text-align: left;
   }
 
   .footer__contacts-container {

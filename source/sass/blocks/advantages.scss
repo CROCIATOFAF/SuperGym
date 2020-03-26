@@ -5,7 +5,7 @@
 .advantages__wrap {
   max-width: 1366px;
   margin: 0 auto;
-  padding: 118px 103px 103px;
+  padding: 118px 103px 95px;
 }
 
 .advantages__title {
@@ -24,6 +24,10 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 0 30px 0 0;
+}
+
+.advantages__description-block {
+  margin-left: 86px;
 }
 
 .advantages__description-block h3 {
@@ -54,12 +58,13 @@
 }
 
 .advantages__main-block {
-  width: 23.1%;
+  width: 21%;
   min-height: 307px;
   background: $blocks-background-color;
   padding: 55px 33px 10px;
   margin: -90px auto 0;
   position: relative;
+  bottom: -13px;
 
   &::after {
     content: "";
@@ -149,19 +154,6 @@
   margin: 4px 0 6px 0;
 }
 
-// .advantages__count-block {
-//   align-self: center;
-// }
-//
-// .advantages__count-block path {
-//   fill: linear-gradient(#d10a42, #0041ca);
-//   align-self: center;
-// }
-//
-// .svg-70 {
-//   fill: linear-gradient(#d10a42, #0041ca);
-// }
-
 .advantages__img-tablet,
 .advantages__img-mobile {
   display: none;
@@ -169,6 +161,40 @@
 
 .advantages__img-desktop {
   display: block;
+  position: relative;
+  left: 60px;
+  top: 12px;
+}
+
+.advantages__img-desktop--70-cars {
+  position: relative;
+  left: 20px;
+  top: 12px;
+}
+
+.advantages__description-block--70-cars {
+  margin-left: 51px;
+}
+
+.advantages__img-desktop--350-spots {
+  position: relative;
+  left: 60px;
+  top: 24px;
+}
+
+.advantages__description-block--350-spots {
+  margin-top: 12px;
+}
+
+.advantages__img-desktop--5-plus {
+  position: relative;
+  left: 16px;
+  top: 24px;
+}
+
+.advantages__description-block--5-plus {
+  margin-top: 13px;
+  margin-left: 48px;
 }
 
 @media (max-width: $tablet-width) {
@@ -177,12 +203,12 @@
     margin: 0 auto;
     padding: 0 45px;
     padding-top: 98px;
-    padding-bottom: 80px;
+    padding-bottom: 95px;
   }
 
   .advantages__title {
     @include section-header-tablet;
-    margin: 0 0 45px 0;
+    margin: 0 0 44px 0;
   }
 
   .advantages__count {
@@ -264,28 +290,59 @@
   .advantages__img-tablet {
     display: block;
   }
+
+  .advantages__description-block {
+    margin-left: 28px;
+  }
+
+  .advantages__img-tablet--900square_m {
+    width: 89px;
+    height: 60px;
+    position: relative;
+    top: 8px;
+  }
+
+
+  .advantages__img-tablet--70-cars {
+    width: 59px;
+    height: 60px;
+    position: relative;
+    top: 8px;
+  }
+
+  .advantages__img-tablet--350-spots {
+    width: 89px;
+    height: 60px;
+    position: relative;
+    top: 21px;
+  }
+
+  .advantages__img-tablet--5-plus {
+    width: 57px;
+    height: 60px;
+    position: relative;
+    top: 21px;
+    left: -4px;
+  }
 }
 
 @media (max-width: $mobile-width) {
   .advantages__wrap {
     max-width: 767px;
     margin: 0 auto;
-    padding: 69px 0 65px;
+    padding: 69px 0 57px;
   }
 
   .advantages__title {
     @include section-header-mobile;
-  }
-
-  .advantages__description-block h3 {
-    margin: -7px 0 2px 0;
+    margin-bottom: 51px;
   }
 
   .advantages__main-block {
     width: 100%;
     min-height: 239px;
     padding: 38px 74px 20px;
-    margin: 44px auto 41px;
+    margin: 23px auto 64px;
   }
 
   .advantages__main-unit {
@@ -304,6 +361,7 @@
   .advantages__experience {
     width: 100%;
     flex-direction: column;
+    margin-bottom: 8px;
   }
 
   .advantages__count,
@@ -327,10 +385,18 @@
     margin-top: 34px;
   }
 
-  .advantages__parking h3,
-  .advantages__comfort h3,
-  .advantages__experience h3 {
-    margin-top: -7px;
+  .advantages__parking h3 {
+    margin-top: 13px;
+    margin-bottom: 2px;
+  }
+
+  .advantages__comfort h3 {
+    margin-top: 1px;
+  }
+
+  .advantages__area h3 {
+    margin-top: 12px;
+    margin-bottom: 4px;
   }
 
   .advantages__experience {
@@ -344,5 +410,29 @@
 
   .advantages__img-mobile {
     display: block;
+  }
+
+  .advantages__img-mobile--900square_m {
+    width: 89px;
+    height: 60px;
+  }
+
+  .advantages__img-mobile--70-cars {
+    width: 59px;
+    height: 60px;
+  }
+
+  .advantages__img-mobile--350-spots {
+    width: 89px;
+    height: 60px;
+  }
+
+  .advantages__img-mobile--5-plus {
+    width: 57px;
+    height: 60px;
+  }
+
+  .advantages__description-block {
+    margin-left: 0;
   }
 }
