@@ -5,6 +5,16 @@ var tabControls = document.querySelector('.subscriptions__controls-list');
 var tabContent = document.querySelectorAll('.subscriptions__tabs-list');
 var subscriptionsPage = document.querySelector('.subscriptions');
 
+var visitorReview = document.querySelector('.visitor-review');
+var visitorReviewSlide = document.querySelectorAll('.visitor-review__item');
+var reviewArrowLeft = document.querySelector('.visitor-review__arrow-left');
+var reviewArrowRight = document.querySelector('.visitor-review__arrow-right');
+
+var coachesPage = document.querySelector('.coaches');
+var coachesList = document.querySelector('.coaches__list');
+var coachesSlides = document.querySelectorAll('.coaches__item');
+var coachesArrowRight = document.querySelector('.coaches__arrow-right');
+var coachesArrowLeft = document.querySelector('.coaches__arrow-left');
 
 function switchTabs() {
   function hideTabContent(a) {
@@ -43,14 +53,63 @@ if (subscriptionsPage) {
   switchTabs();
 }
 
-var btnScrollDown =
-document.querySelector('.promo__button');
-var subscriptionSection = document.querySelector('.subscriptions');
+function switchSlider(step, slides, prev, next) {
+  var startIndex = 0;
+  var endIndex = step;
 
-btnScrollDown.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  subscriptionSection.scrollIntoView({
-    block: 'start',
-    behavior: 'smooth'
+  function showSlide(n, k) {
+    for (var j = 0; j < slides.length; j++) {
+      slides[j].style.display = 'none';
+    }
+
+    for (var i = n; i < k; i++) {
+      if (slides[i]) {
+        slides[i].style.display = 'block';
+      }
+    }
+  }
+
+  showSlide(startIndex, endIndex);
+
+  function plusSlide(n) {
+    showSlide(startIndex += n, endIndex += n);
+  }
+
+
+  next.addEventListener('click', function () {
+    if (endIndex < slides.length) {
+      plusSlide(step);
+    }
   });
-});
+
+
+  prev.addEventListener('click', function () {
+    if (startIndex >= step) {
+      plusSlide(-step);
+    }
+  });
+}
+
+function changeCoachesSlider() {
+  if (window.matchMedia('(max-width: 767px)').matches) {
+    switchSlider(1, coachesSlides, coachesArrowLeft, coachesArrowRight);
+  } else if (window.matchMedia('(max-width: 1199px)').matches) {
+    switchSlider(2, coachesSlides, coachesArrowLeft, coachesArrowRight);
+  } else {
+    switchSlider(4, coachesSlides, coachesArrowLeft, coachesArrowRight);
+  }
+}
+
+if (coachesPage) {
+  coachesArrowLeft.classList.remove('no-js');
+  coachesArrowRight.classList.remove('no-js');
+  changeCoachesSlider();
+  window.addEventListener('resize', changeCoachesSlider);
+}
+
+if (visitorReview) {
+  reviewArrowLeft.classList.remove('no-js');
+  reviewArrowRight.classList.remove('no-js');
+  coachesList.classList.remove('coaches__list--no-js');
+  switchSlider(1, visitorReviewSlide, reviewArrowLeft, reviewArrowRight);
+}
