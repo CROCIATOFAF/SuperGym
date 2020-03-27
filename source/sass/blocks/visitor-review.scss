@@ -79,6 +79,7 @@
   line-height: 30px;
   color: $second-text-color;
   margin: 0 0 13px 0;
+  word-break: break-word;
 }
 
 .visitor-review__item p {
@@ -110,6 +111,11 @@
     min-height: 242px;
     padding: 54px 62px 57px 173px;
   }
+
+  .visitor-review__item h3 {
+    word-break: break-word;
+  }
+
 
   .visitor-review__avatar {
     left: 65px;
@@ -148,6 +154,7 @@
   .visitor-review__item h3 {
     line-height: 26px;
     margin-top: 7px;
+    word-break: break-word;
   }
 
   .visitor-review__item p {

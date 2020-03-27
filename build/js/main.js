@@ -16,6 +16,9 @@ var coachesSlides = document.querySelectorAll('.coaches__item');
 var coachesArrowRight = document.querySelector('.coaches__arrow-right');
 var coachesArrowLeft = document.querySelector('.coaches__arrow-left');
 
+var btnScrollDown =
+document.querySelector('.promo__button');
+
 function switchTabs() {
   function hideTabContent(a) {
     for (var i = a; i < tabContent.length; i++) {
@@ -113,3 +116,14 @@ if (visitorReview) {
   coachesList.classList.remove('coaches__list--no-js');
   switchSlider(1, visitorReviewSlide, reviewArrowLeft, reviewArrowRight);
 }
+
+// добавить переменную блока и в window
+var subscriptionsSecton = document.querySelector('.subscriptions');
+
+btnScrollDown.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  subscriptionsSecton.scrollIntoView({
+    block: 'start',
+    behavior: 'smooth'
+  });
+});

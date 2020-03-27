@@ -193,18 +193,15 @@
 }
 
 @media (max-width: $mobile-width) {
-  .promo__header {
-    font-size: 78px;
-    line-height: 78px;
+  .promo {
+    max-width: 767px;
+    margin: 0 auto;
   }
 
-  .promo__header--first {
-    font-size: 28px;
-    line-height: 28px;
-    margin-bottom: 11px;
-  }
 
   .promo__wrapper {
+    max-width: 767px;
+    margin: 0 auto;
     padding-top: 72px;
     padding-left: 15px;
     padding-right: 15px;
@@ -223,10 +220,23 @@
   }
 
   .promo__wrapper-content {
-    width: 290px;
+    width: 100%;
+    margin: 0;
 
     &::before {
       display: none;
     }
+  }
+
+  .promo__header {
+    font-size: 78px;
+    line-height: 78px;
+    width: 100%;
+  }
+
+  .promo__header--first {
+    font-size: 28px;
+    line-height: 28px;
+    margin-bottom: 11px;
   }
 }
