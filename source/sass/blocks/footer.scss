@@ -16,7 +16,6 @@
 .footer__bottom-nav-list {
   list-style: none;
   position: relative;
-  left: 10px;
 
   @include no-marg-padd;
   display: flex;
@@ -322,6 +321,10 @@
     top: -3px;
   }
 
+  .footer__bottom-nav-list {
+    left: -7px;
+  }
+
   .footer__bottom-section {
     max-width: 1199px;
     margin: 0 auto;
@@ -433,7 +436,6 @@
     max-width: 400px;
     margin-left: 19px;
     position: relative;
-    left: 9px;
   }
 
   .footer__social-list {
