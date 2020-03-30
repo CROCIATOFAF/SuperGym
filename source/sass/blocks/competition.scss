@@ -136,6 +136,9 @@
 .competition__picture img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+
+  @include object-fit(cover);
 }
 
 @media (max-width: $tablet-width) {
@@ -215,6 +218,12 @@
   .competition__description {
     margin: 2px 0 28px 0;
   }
+
+  .competition__picture img {
+    object-fit: cover;
+
+    @include object-fit(cover) ;
+  }
 }
 
 @media (max-width: $mobile-width) {
@@ -256,5 +265,8 @@
     left: 0;
     bottom: 0;
     right: 0;
+    object-fit: cover;
+
+    @include object-fit(cover);
   }
 }

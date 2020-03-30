@@ -23,7 +23,9 @@
       <nav class="main-nav">
         <div class="main-nav__logo">
           <a class="main-nav__logo-link">
-            <img class="main-nav__logo-image" src="img/Supergym.svg" alt="Логотип SuperGym" width="89" height="20">
+            <img class="main-nav__logo-image main-nav__logo-image--desktop" src="img/Supergym.svg" alt="Логотип SuperGym" width="89" height="20">
+            <img class="main-nav__logo-image main-nav__logo-image--tablet" src="img/Supergym-tablet.svg" alt="Логотип SuperGym" width="82" height="17">
+            <img class="main-nav__logo-image main-nav__logo-image--mobile" src="img/Supergym-mobile.svg" alt="Логотип SuperGym" width="68" height="15">
           </a>
         </div>
         <a class="main-nav__text" href="tel:8-800-555-55-55">
@@ -43,7 +45,7 @@
             <p class="promo__text">Кардио-зона</p>
           </div>
         </div>
-        <a href="#" class="promo__button">Купить абонемент</a>
+        <a href="#subscriptions" class="promo__button">Купить абонемент</a>
 
         <ul class="promo__social-list">
           <li class="promo__social-list-item">
@@ -529,12 +531,13 @@
     <div class="footer__bottom-wrapper">
       <div class="footer__bottom-section">
         <a href="#" class="footer__bottom-link footer__bottom-link--logo-top">
-          <img class="footer__logo-image" src="img/Supergym.svg" alt="Логотип SuperGym" width="89" height="20">
+          <img class="footer__logo-image footer__logo-image--desktop" src="img/Supergym.svg" alt="Логотип SuperGym" width="89" height="20">
+          <img class="footer__logo-image footer__logo-image--tablet" src="img/Supergym-tablet.svg" alt="Логотип SuperGym" width="82" height="17">
         </a>
         <ul class="footer__bottom-nav-list">
           <li class="footer__bottom-item footer__bottom-item--list-logo">
             <a href="#" class="footer__bottom-link">
-              <img class="footer__logo-image" src="img/Supergym.svg" alt="Логотип SuperGym" width="89" height="20">
+              <img class="footer__logo-image footer__logo-image--mobile" src="img/Supergym-mobile.svg" alt="Логотип SuperGym" width="68" height="15">
             </a>
           </li>
           <li class="footer__bottom-item">
@@ -583,7 +586,10 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+
   <script src="https://unpkg.com/imask"></script>
+
   <script src="js/main.js"></script>
   <script src="js/vendor.js"></script>
 </body>
