@@ -3,7 +3,7 @@
   margin: 0 auto;
   padding: 0 103px;
 
-  padding-top: 80px;
+  padding-top: 73px;
   padding-bottom: 116px;
 }
 
@@ -11,6 +11,7 @@
   @include section-header-desktop;
   color: $main-text-color;
   text-align: center;
+  margin-top: 51px;
   margin-bottom: 51px;
 }
 
@@ -161,6 +162,7 @@
   .advertising__title {
     @include section-header-tablet;
     margin-bottom: 41px;
+    margin-top: 34px;
   }
 
   .advertising__img-desktop,
@@ -219,6 +221,7 @@
   .advertising__title {
     @include section-header-mobile;
     margin-bottom: 43px;
+    margin-top: 27px;
   }
 
   .advertising__img-desktop,

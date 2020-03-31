@@ -201,8 +201,8 @@
       right: 1px;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/pink-plates-tablet.png");
-        background-size: 100% 100%;
+        background-image: url("../img/pink-plates-tablet@2x.png");
+        background-size: 381px 447px;
       }
     }
   }

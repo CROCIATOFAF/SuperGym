@@ -2,14 +2,14 @@
   max-width: 1366px;
   margin: 0 auto;
   padding: 0 103px;
-  padding-bottom: 122px;
+  padding-bottom: 120px;
 }
 
 .visitor-review__title {
   @include section-header-desktop;
   color: $main-text-color;
   text-align: center;
-  margin: 0 0 54px 0;
+  margin: 0 0 56px 0;
 }
 
 .visitor-review__container {
