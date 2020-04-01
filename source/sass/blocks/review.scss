@@ -137,7 +137,7 @@
     max-height: 167px;
     width: 266px;
     margin-right: 0;
-    margin-top: -84px;
+    margin-top: -88px;
   }
 
   .review__video-container img {
@@ -228,5 +228,13 @@
     position: absolute;
     top: calc(50% - 36.5px);
     left: calc(50% - 36.5px);
+  }
+
+  .review__photo-container picture {
+    width: 100%;
+  }
+
+  .review__photo-container img {
+    width: 100%;
   }
 }

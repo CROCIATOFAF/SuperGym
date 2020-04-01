@@ -23,9 +23,7 @@
       <nav class="main-nav">
         <div class="main-nav__logo">
           <a class="main-nav__logo-link">
-            <img class="main-nav__logo-image main-nav__logo-image--desktop" src="img/Supergym.svg" alt="Логотип SuperGym" width="89" height="20">
-            <img class="main-nav__logo-image main-nav__logo-image--tablet" src="img/Supergym-tablet.svg" alt="Логотип SuperGym" width="82" height="17">
-            <img class="main-nav__logo-image main-nav__logo-image--mobile" src="img/Supergym-mobile.svg" alt="Логотип SuperGym" width="68" height="15">
+            <img class="main-nav__logo-image" src="img/Supergym.svg" alt="Логотип SuperGym" width="89" height="20">
           </a>
         </div>
         <a class="main-nav__text" href="tel:8-800-555-55-55">
@@ -72,14 +70,31 @@
         <p class="review__text-desktop">В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
       </div>
       <div class="review__photo-container">
-        <img class="review__photo-desktop" src="img/Gym.jpg" width="660" height="401" srcset="img/Gym.jpg, img/Gym@2x.jpg 2x" alt="Тренажерный зал, панорама">
-        <img class="review__photo-tablet" src="img/Gym-tablet.jpg" width="678" height="345" srcset="img/Gym-tablet.jpg, img/Gym-tablet@2x.jpg 2x" alt="Тренажерный зал, панорама">
-        <img class="review__photo-mobile" src="img/Gym-mobile.jpg" width="320" height="313" srcset="img/Gym-mobile.jpg, img/Gym-mobile@2x.jpg 2x" alt="Тренажерный зал, панорама">
+
+        <picture>
+          <source type="image/webp" media="(min-width: 1200px)" srcset="img/Gym.webp 1x, img/Gym@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/Gym-tablet.webp 1x, img/Gym-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/Gym-mobile.webp 1x, img/Gym-mobile@2x.webp 2x">
+
+          <source media="(min-width: 1200px)" srcset="img/Gym.jpg 1x, img/Gym@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/Gym-tablet.jpg 1x, img/Gym-tablet@2x.jpg 2x">
+          <img src="img/Gym-mobile.jpg" srcset="img/Gym-mobile.jpg 1x, img/Gym-mobile@2x.jpg 2x" alt="Тренажерный зал, панорама">
+        </picture>
+
         <div class="review__video-container">
-          <img class="review__video-desktop" src="img/gym-video-desktop.jpg" width="364" height="228" srcset="img/gym-video-desktop.jpg, img/gym-video-desktop@2x.jpg 2x" alt="Видео обзор зала">
-          <img class="review__video-tablet" src="img/gym-video-tablet.jpg" width="266" height="167" srcset="img/gym-video-tablet.jpg, img/gym-video-tablet@2x.jpg 2x" alt="Видео обзор зала">
-          <img class="review__video-mobile" src="img/gym-video-mobile.jpg" width="320" height="167" srcset="img/gym-video-mobile.jpg, img/gym-video-mobile@2x.jpg 2x" alt="Видео обзор зала">
+
+          <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/gym-video-desktop.webp 1x, img/gym-video-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/gym-video-tablet.webp 1x, img/gym-video-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/gym-video-mobile.webp 1x, img/gym-video-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1200px)" srcset="img/gym-video-desktop.jpg 1x, img/gym-video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/gym-video-tablet.jpg 1x, img/gym-video-tablet@2x.jpg 2x">
+            <img src="img/gym-video-mobile.jpg" srcset="img/gym-video-mobile.jpg 1x, img/gym-video-mobile@2x.jpg 2x" alt="Видео-обзор зала">
+          </picture>
           <button type="button" aria-label="Запустить видео"></button>
+
+
         </div>
       </div>
     </section>
@@ -230,9 +245,15 @@
           <a class="competition__link" href="#">заполнить заявку</a>
         </div>
         <div class="competition__picture">
-          <img class="competition__img-desktop" src="img/Athlete-n-Dust.jpg" width="660" height="500" srcset="img/Athlete-n-Dust.jpg, img/Athlete-n-Dust@2x.jpg 2x" alt="Спортсмен поднимает облако пыли">
-          <img class="competition__img-tablet" src="img/Athlete-n-Dust-tablet.jpg" width="386" height="292" srcset="img/Athlete-n-Dust-tablet.jpg, img/Athlete-n-Dust-tablet@2x.jpg 2x" alt="Спортсмен поднимает облако пыли">
-          <img class="competition__img-mobile" src="img/Athlete-n-Dust-mobile.jpg" width="290" height="292" srcset="img/Athlete-n-Dust-mobile.jpg, img/Athlete-n-Dust-mobile@2x.jpg 2x" alt="Спортсмен поднимает облако пыли">
+          <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/Athlete-n-Dust.webp 1x, img/Athlete-n-Dust@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/Athlete-n-Dust-tablet.webp 1x, img/Athlete-n-Dust-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/Athlete-n-Dust-mobile.webp 1x, img/Athlete-n-Dust-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1200px)" srcset="img/Athlete-n-Dust.jpg 1x, img/Athlete-n-Dust@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/Athlete-n-Dust-tablet.jpg 1x, img/Athlete-n-Dust-tablet@2x.jpg 2x">
+            <img src="img/Athlete-n-Dust-mobile.jpg" srcset="img/Athlete-n-Dust-mobile.jpg 1x, img/Athlete-n-Dust-mobile@2x.jpg 2x" alt="Спортсмен поднимает облако пыли">
+          </picture>
         </div>
       </div>
     </section>
@@ -366,9 +387,16 @@
           <div class="advantages__top-block">
             <div class="advantages__area">
               <div class="advantages__count-block">
-                <img class="advantages__img-desktop" src="img/900square_m-desktop.png" width="108" height="71" srcset="img/900square_m-desktop.png, img/900square_m-desktop@2x.png 2x" alt="900 квадратных метров изображенные графически">
-                <img class="advantages__img-tablet advantages__img-tablet--900square_m" src="img/900square_m-tablet.png" width="108" height="71" srcset="img/900square_m-tablet.png, img/900square_m-tablet@2x.png 2x" alt="900 квадратных метров изображенные графически">
-                <img class="advantages__img-mobile advantages__img-mobile--900square_m" src="img/900square_m-mobile.png" width="108" height="71" srcset="img/900square_m-mobile.png, img/900square_m-mobile@2x.png 2x" alt="900 квадратных метров изображенные графически">
+
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/900square_m-desktop.webp 1x, img/900square_m-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/900square_m-tablet.webp 1x, img/900square_m-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/900square_m-mobile.webp 1x, img/900square_m-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1200px)" srcset="img/900square_m-desktop.png 1x, img/900square_m-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/900square_m-tablet.png 1x, img/900square_m-tablet@2x.png 2x">
+                  <img src="img/900square_m-mobile.png" srcset="img/900square_m-mobile.png 1x, img/900square_m-mobile@2x.png 2x" alt="900 квадратных метров изображенные графически">
+                </picture>
               </div>
               <div class="advantages__description-block">
                 <h3>Площадь</h3>
@@ -377,9 +405,17 @@
             </div>
             <div class="advantages__parking">
               <div class="advantages__count-block">
-                <img class="advantages__img-desktop advantages__img-desktop--70-cars" src="img/70cars-desktop.png" width="72" height="71" srcset="img/70cars-desktop.png, img/70cars-desktop@2x.png 2x" alt="700 машин графически изображенное словосочетание">
-                <img class="advantages__img-tablet advantages__img-tablet--70-cars" src="img/70cars-tablet.png" width="72" height="71" srcset="img/70cars-tablet.png, img/70cars-tablet@2x.png 2x" alt="700 машин графически изображенное словосочетание">
-                <img class="advantages__img-mobile advantages__img-mobile--70-cars" src="img/70cars-mobile.png" width="72" height="71" srcset="img/70cars-mobile.png, img/70cars-mobile@2x.png 2x" alt="700 машин графически изображенное словосочетание">
+
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/70cars-desktop.webp 1x, img/70cars-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/70cars-tablet.webp 1x, img/70cars-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/70cars-mobile.webp 1x, img/70cars-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1200px)" srcset="img/70cars-desktop.png 1x, img/70cars-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/70cars-tablet.png 1x, img/70cars-tablet@2x.png 2x">
+                  <img src="img/900square_m-mobile.png" srcset="img/70cars-mobile.png 1x, img/70cars-mobile@2x.png 2x" alt="700 машин графически изображенное словосочетание">
+                </picture>
+
               </div>
               <div class="advantages__description-block advantages__description-block--70-cars">
                 <h3>Собственная парковка</h3>
@@ -395,9 +431,16 @@
           <div class="advantages__bottom-block">
             <div class="advantages__comfort">
               <div class="advantages__count-block">
-                <img class="advantages__img-desktop advantages__img-desktop--350-spots" src="img/350spots-desktop.png" width="108" height="71" srcset="img/350spots-desktop.png, img/350spots-desktop@2x.png 2x" alt="350 мест графическое изображение словосочетания">
-                <img class="advantages__img-tablet advantages__img-tablet--350-spots" src="img/350spots-tablet.png" width="108" height="71" srcset="img/350spots-tablet.png, img/350spots-tablet@2x.png 2x" alt="350 мест графическое изображение словосочетания">
-                <img class="advantages__img-mobile advantages__img-mobile--350-spots" src="img/350spots-mobile.png" width="108" height="71" srcset="img/350spots-mobile.png, img/350spots-mobile@2x.png 2x" alt="350 мест графическое изображение словосочетания">
+
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/350spots-desktop.webp 1x, img/350spots-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/350spots-tablet.webp 1x, img/350spots-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/350spots-mobile.webp 1x, img/350spots-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1200px)" srcset="img/350spots-desktop.png 1x, img/350spots-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/350spots-tablet.png 1x, img/350spots-tablet@2x.png 2x">
+                  <img src="img/350spots-mobile.png" srcset="img/350spots-mobile.png 1x, img/350spots-mobile@2x.png 2x" alt="350 мест графическое изображение словосочетания">
+                </picture>
               </div>
               <div class="advantages__description-block advantages__description-block--350-spots">
                 <h3>Комфорт</h3>
@@ -406,9 +449,17 @@
             </div>
             <div class="advantages__experience">
               <div class="advantages__count-block">
-                <img class="advantages__img-desktop advantages__img-desktop--5-plus" src="img/5plus-desktop.png" width="70" height="71" srcset="img/5plus-desktop.png, img/5plus-desktop@2x.png 2x" alt="5 с плюсом изображенное графически">
-                <img class="advantages__img-tablet advantages__img-tablet--5-plus" src="img/5plus-tablet.png" width="70" height="71" srcset="img/5plus-tablet.png, img/5plus-tablet@2x.png 2x" alt="5 с плюсом изображенное графически">
-                <img class="advantages__img-mobile advantages__img-mobile--5-plus" src="img/5plus-mobile.png" width="70" height="71" srcset="img/5plus-mobile.png, img/5plus-mobile@2x.png 2x" alt="5 с плюсом изображенное графически">
+
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/5plus-desktop.webp 1x, img/5plus-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/5plus-tablet.webp 1x, img/5plus-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/5plus-mobile.webp 1x, img/5plus-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1200px)" srcset="img/5plus-desktop.png 1x, img/5plus-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/5plus-tablet.png 1x, img/5plus-tablet@2x.png 2x">
+                  <img src="img/5plus-mobile.png" srcset="img/5plus-mobile.png 1x, img/5plus-mobile@2x.png 2x" alt="5 с плюсом изображенное графически">
+                </picture>
+
               </div>
               <div class="advantages__description-block advantages__description-block--5-plus">
                 <h3>Тренерский опыт</h3>
@@ -430,9 +481,16 @@
             <p class="advertising__main-text">Безлимитный абонемент в тренажерный зал</p>
             <a class="advertising__main-link" href="#">подробнее</a>
           </div>
-          <img class="advertising__img-desktop" src="img/LadyInBLue.jpg" width="280" height="462" srcset="img/LadyInBLue.jpg, img/LadyInBLue@2x.jpg 2x" alt="Девушка в синем спортивном костюме">
-          <img class="advertising__img-tablet" src="img/LadyInBLue-tablet.jpg" width="399" height="462" srcset="img/LadyInBLue-tablet.jpg, img/LadyInBLue-tablet@2x.jpg 2x" alt="Девушка в синем спортивном костюме">
-          <img class="advertising__img-mobile" src="img/LadyInBLue-mobile.jpg" width="290" height="299" srcset="img/LadyInBLue-mobile.jpg, img/LadyInBLue-mobile@2x.jpg 2x" alt="Девушка в синем спортивном костюме">
+
+          <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/LadyInBLue.webp 1x, img/LadyInBLue@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/LadyInBLue-tablet.webp 1x, img/LadyInBLue-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/LadyInBLue-mobile.webp 1x, img/LadyInBLue-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1200px)" srcset="img/LadyInBLue.jpg 1x, img/LadyInBLue@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/LadyInBLue-tablet.jpg 1x, img/LadyInBLue-tablet@2x.jpg 2x">
+            <img src="img/LadyInBLue-mobile.jpg" srcset="img/LadyInBLue-mobile.jpg 1x, img/LadyInBLue-mobile@2x.jpg 2x" alt="Девушка в синем спортивном костюме">
+          </picture>
         </div>
         <ul class="advertising__list">
           <li>
@@ -525,8 +583,7 @@
     <div class="footer__bottom-wrapper">
       <div class="footer__bottom-section">
         <a href="#" class="footer__bottom-link footer__bottom-link--logo-top">
-          <img class="footer__logo-image footer__logo-image--desktop" src="img/Supergym.svg" alt="Логотип SuperGym" width="89" height="20">
-          <img class="footer__logo-image footer__logo-image--tablet" src="img/Supergym-tablet.svg" alt="Логотип SuperGym" width="82" height="17">
+          <img class="footer__logo-image" src="img/Supergym.svg" alt="Логотип SuperGym" width="89" height="20">
         </a>
         <ul class="footer__bottom-nav-list">
           <li class="footer__bottom-item footer__bottom-item--list-logo">

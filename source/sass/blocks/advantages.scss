@@ -154,11 +154,6 @@
   margin: 4px 0 6px 0;
 }
 
-.advantages__img-tablet,
-.advantages__img-mobile {
-  display: none;
-}
-
 .advantages__img-desktop {
   display: block;
   position: relative;
@@ -166,35 +161,41 @@
   top: 12px;
 }
 
-.advantages__img-desktop--70-cars {
-  position: relative;
-  left: 20px;
-  top: 12px;
-}
-
 .advantages__description-block--70-cars {
   margin-left: 51px;
-}
-
-.advantages__img-desktop--350-spots {
-  position: relative;
-  left: 60px;
-  top: 24px;
 }
 
 .advantages__description-block--350-spots {
   margin-top: 12px;
 }
 
-.advantages__img-desktop--5-plus {
-  position: relative;
-  left: 16px;
-  top: 24px;
-}
-
 .advantages__description-block--5-plus {
   margin-top: 13px;
   margin-left: 48px;
+}
+
+.advantages__area img {
+  position: relative;
+  left: 63px;
+  top: 9px;
+}
+
+.advantages__parking img {
+  position: relative;
+  top: 9px;
+  left: 23px;
+}
+
+.advantages__comfort img {
+  position: relative;
+  top: 23px;
+  left: 63px;
+}
+
+.advantages__experience img {
+  position: relative;
+  top: 23px;
+  left: 18px;
 }
 
 @media (max-width: $tablet-width) {
@@ -282,46 +283,31 @@
     width: 230px;
   }
 
-  .advantages__img-desktop,
-  .advantages__img-mobile {
-    display: none;
-  }
-
-  .advantages__img-tablet {
-    display: block;
-  }
-
   .advantages__description-block {
     margin-left: 28px;
   }
 
-  .advantages__img-tablet--900square_m {
-    width: 89px;
-    height: 60px;
+  .advantages__area img {
+    position: relative;
+    left: 0px;
+    top: 7px;
+  }
+
+  .advantages__parking img {
     position: relative;
     top: 8px;
+    left: -2px;
   }
 
-
-  .advantages__img-tablet--70-cars {
-    width: 59px;
-    height: 60px;
+  .advantages__comfort img {
     position: relative;
-    top: 8px;
+    top: 20px;
+    left: 0px;
   }
 
-  .advantages__img-tablet--350-spots {
-    width: 89px;
-    height: 60px;
+  .advantages__experience img {
     position: relative;
-    top: 21px;
-  }
-
-  .advantages__img-tablet--5-plus {
-    width: 57px;
-    height: 60px;
-    position: relative;
-    top: 21px;
+    top: 20px;
     left: -4px;
   }
 }
@@ -386,16 +372,15 @@
   }
 
   .advantages__parking h3 {
-    margin-top: 13px;
+    margin-top: 8px;
     margin-bottom: 2px;
   }
 
   .advantages__comfort h3 {
-    margin-top: 1px;
+    margin-top: -9px;
   }
 
   .advantages__area h3 {
-    margin-top: 12px;
     margin-bottom: 4px;
   }
 
@@ -403,36 +388,31 @@
     margin-top: 35px;
   }
 
-  .advantages__img-desktop,
-  .advantages__img-tablet {
-    display: none;
-  }
-
-  .advantages__img-mobile {
-    display: block;
-  }
-
-  .advantages__img-mobile--900square_m {
-    width: 89px;
-    height: 60px;
-  }
-
-  .advantages__img-mobile--70-cars {
-    width: 59px;
-    height: 60px;
-  }
-
-  .advantages__img-mobile--350-spots {
-    width: 89px;
-    height: 60px;
-  }
-
-  .advantages__img-mobile--5-plus {
-    width: 57px;
-    height: 60px;
-  }
-
   .advantages__description-block {
     margin-left: 0;
+  }
+
+  .advantages__area img {
+    position: relative;
+    left: 0;
+    top: -4px;
+  }
+
+  .advantages__parking img {
+    position: relative;
+    top: 0px;
+    left: -2px;
+  }
+
+  .advantages__comfort img {
+    position: relative;
+    top: -2px;
+    left: 0px;
+  }
+
+  .advantages__experience img {
+    position: relative;
+    top: 0px;
+    left: -1px;
   }
 }
