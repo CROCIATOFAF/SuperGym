@@ -116,3 +116,25 @@
   }
 
 })();
+
+(function () {
+// mask
+  var element = document.getElementById('tel');
+
+  if (element) {
+    var maskOptions = {
+      mask: '+{7}(000)000-00-00'
+    };
+    var mask = IMask(element, maskOptions);
+  }
+
+})();
+
+(function () {
+// smooth-scroll
+  var scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 800,
+    speedAsDuration: true
+  });
+
+})();
